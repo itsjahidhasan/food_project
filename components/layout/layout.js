@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import * as FabIcons from "react-icons/fa";
 import Link from "next/link";
 import SideBar from "./sidebar";
 
@@ -23,7 +22,7 @@ export default function Layout() {
     let backgroundTransparacyVar = clientWindowHeight / 600;
 
     if (backgroundTransparacyVar < 1) {
-      let paddingVar = 30 - backgroundTransparacyVar * 20;
+      let paddingVar = 10 - backgroundTransparacyVar * 20;
       let boxShadowVar = backgroundTransparacyVar * 0.1;
       setBackgroundTransparacy(backgroundTransparacyVar);
       setPadding(paddingVar);
@@ -44,8 +43,12 @@ export default function Layout() {
       }}
     >
       <div className="container">
-        <Link className="nav-item" href="#">
-          11 Rd No.16
+        <Link className="nav-item" href="#" passHref>
+          <span style={{color:"yellow"}}>11 Rd No.16</span>
+        </Link>
+
+        <Link className="nav-item" href="#" passHref>
+          <span style={{color:"yellow"}}>ShopIcon</span>
         </Link>
 
         <button
@@ -59,7 +62,6 @@ export default function Layout() {
         >
           <span className="navbar-toggler-icon " style={{color:'red !important'}}></span>
         </button>
-         {/* <SideBar /> */}
       </div>
     </nav>
   );
