@@ -1,5 +1,5 @@
 import Layout from "../components/layout/layout";
-import Carousel from "../components/ui/carosol";
+import HomePageSlider from "../components/layout/homePageSlider";
 
 export default function Home() {
   return (
@@ -9,12 +9,8 @@ export default function Home() {
 
         <div style={{ marginTop: "6rem" }}>
           <section id="slider">
-            <Carousel />
+            <HomePageSlider />
           </section>
-
-          
-
-          
         </div>
       </div>
     </body>
