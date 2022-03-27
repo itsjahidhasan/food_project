@@ -14,7 +14,11 @@ export default function HomePageSlider() {
     <>
       <Carousel autoplay>
         <div>
-          <h3 style={contentStyle}>1</h3>
+        <Image
+        src="/image/slider2.jpg"
+        alt="Picture of the author"
+        layout="fill"
+      />
         </div>
         <div>
           <h3 style={contentStyle}>2</h3>

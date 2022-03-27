@@ -35,7 +35,7 @@ export default function Layout() {
       className="navbar navbar-expand-lg navbar-light fixed-top"
       style={{
         backgroundColor: "black",
-        opacity:10,
+        opacity: 10,
         background: `rgba(255, 255, 255, 0.2), ${backgroundTransparacy})`,
         backdrop: "blur(10px)",
         padding: `${padding}px 0px`,
@@ -44,11 +44,11 @@ export default function Layout() {
     >
       <div className="container">
         <Link className="nav-item" href="#" passHref>
-          <span style={{color:"yellow"}}>11 Rd No.16</span>
+          <span style={{ color: "yellow" }}>11 Rd No.16</span>
         </Link>
 
         <Link className="nav-item" href="#" passHref>
-          <span style={{color:"yellow"}}>ShopIcon</span>
+          <span style={{ color: "yellow" }}>ShopIcon</span>
         </Link>
 
         <button
@@ -60,7 +60,9 @@ export default function Layout() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon " style={{color:'red !important'}}></span>
+          <span
+            className="navbar-toggler-icon "
+          ></span>
         </button>
       </div>
     </nav>
