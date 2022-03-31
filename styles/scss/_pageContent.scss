@@ -3,6 +3,7 @@
   font-weight: bold;
   color: yellow;
   background: none;
+  margin-bottom: 30px;
 }
 .txtStyle {
   color: rgb(240, 240, 235);
@@ -26,6 +27,7 @@
   margin-right: 20px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
+
 }
 .favoriteItems{
   margin-top: 15px;
@@ -51,3 +53,22 @@
   float: left;
   padding-bottom: 25px;
 }
+.allRestaurants{
+  margin-left: 25px;
+}
+.allRestaurants-items{
+  margin-top: 15px;
+  padding-bottom: 25px;
+  width: 90vw;
+}
+.allRestaurants-img{
+  height: 230px;
+  color: #fff;
+  background: #364d79;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border: 2px solid #2e2e2e;
+  border-radius: 15px;
+}
+

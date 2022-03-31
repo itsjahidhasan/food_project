@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import SideBar from "./sidebar";
 
+
 export default function Layout() {
   const [clientWindowHeight, setClientWindowHeight] = useState("");
 
@@ -47,8 +48,8 @@ export default function Layout() {
           <span style={{ color: "yellow" }}>11 Rd No.16</span>
         </Link>
 
-        <Link className="nav-item" href="#" passHref>
-          <span style={{ color: "yellow" }}>ShopIcon</span>
+        <Link className="nav-item cart-icon" href="/Cart" passHref>
+          <a style={{ color: "yellow",marginRight:"-279px" }}>ShopIcon</a>
         </Link>
 
         <button
@@ -61,7 +62,7 @@ export default function Layout() {
           aria-label="Toggle navigation"
         >
           <span
-            className="navbar-toggler-icon "
+            className="navbar-toggler-icon"
           ></span>
         </button>
       </div>
