@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 export default function content() {
   return (
     <>
@@ -5,20 +7,29 @@ export default function content() {
       <div className="favoriteContent">
         <h2 className="headerStyle">Your Favorite</h2>
         <div>
-          <div className="favoriteItems">
-            <div className="favoriteImage"></div>
-            <div style={{ marginLeft: "10px" }}>
-              <h6 className="txtStyle">Haji Biriyani</h6>
-              <span className="subTextStyle">4 items</span>
-            </div>
-          </div>
-          <div className="favoriteItems">
-            <div className="favoriteImage"></div>
-            <div style={{ marginLeft: "10px" }}>
-              <h6 className="txtStyle">Hanif Biriyani</h6>
-              <span className="subTextStyle">3 items</span>
-            </div>
-          </div>
+          <Link href="/foodmenu">
+            <a>
+              <div className="favoriteItems">
+                <div className="favoriteImage"></div>
+                <div style={{ marginLeft: "10px" }}>
+                  <h6 className="txtStyle">Haji Biriyani</h6>
+                  <span className="subTextStyle">4 items</span>
+                </div>
+              </div>
+            </a>
+          </Link>
+
+          <Link href="/">
+            <a>
+              <div className="favoriteItems">
+                <div className="favoriteImage"></div>
+                <div style={{ marginLeft: "10px" }}>
+                  <h6 className="txtStyle">Hanif Biriyani</h6>
+                  <span className="subTextStyle">3 items</span>
+                </div>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
       {/* Available content */}
@@ -73,7 +84,6 @@ export default function content() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }
