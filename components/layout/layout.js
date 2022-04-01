@@ -37,9 +37,8 @@ export default function Layout() {
       style={{
         backgroundColor: "black",
         opacity: 10,
-        background: `rgba(255, 255, 255, 0.2), ${backgroundTransparacy})`,
+        height:"60px",
         backdrop: "blur(10px)",
-        padding: `${padding}px 0px`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
       }}
     >
