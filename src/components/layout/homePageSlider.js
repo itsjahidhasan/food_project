@@ -14,7 +14,8 @@ export default function HomePageSlider() {
     <>
       <Carousel autoplay>
         <div>
-          <h3 style={contentStyle}>1</h3>
+           {/* <Image height='100%' width='100%' src={'/vercel.svg'} /> */}
+           <h3 style={contentStyle}>1</h3>
         </div>
         <div>
           <h3 style={contentStyle}>2</h3>
