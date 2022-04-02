@@ -1,33 +1,11 @@
 import { useEffect, useState } from "react";
-import { Drawer, Button } from "antd";
-import Link from "next/link";
+import { Drawer,Layout, Menu,Row, Col } from "antd";
+import {MenuOutlined,ShoppingCartOutlined} from '@ant-design/icons'
+ 
+const { Header, Content, Sider } = Layout;
+const { SubMenu } = Menu;
 
-export default function Layout() {
-  const [clientWindowHeight, setClientWindowHeight] = useState("");
-  const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
-  const [padding, setPadding] = useState(30);
-  const [boxShadow, setBoxShadow] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
-
-  const handleScroll = () => {
-    setClientWindowHeight(window.scrollY);
-  };
-
-  useEffect(() => {
-    let backgroundTransparacyVar = clientWindowHeight / 600;
-
-    if (backgroundTransparacyVar < 1) {
-      let paddingVar = 10 - backgroundTransparacyVar * 20;
-      let boxShadowVar = backgroundTransparacyVar * 0.1;
-      setBackgroundTransparacy(backgroundTransparacyVar);
-      setPadding(paddingVar);
-      setBoxShadow(boxShadowVar);
-    }
-  }, [clientWindowHeight]);
+export default function Common() {
 
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
@@ -38,8 +16,8 @@ export default function Layout() {
   };
 
   return (
-    <>
-      <nav
+    <Layout>
+      {/* <nav
         className="navbar navbar-expand-lg navbar-light fixed-top"
         style={{
           backgroundColor: "black",
@@ -62,18 +40,42 @@ export default function Layout() {
             <span className="navbar-toggler-icon"></span>
           </button>
         </div>
-      </nav>
+      </nav> */}
+
+      <Header className="header" style={{padding:0}}>
+         
+        <Row>
+        <Col span={8}>
+          <div className="logo" />
+        </Col>
+        <Col span={10}></Col>
+        <Col span={6}>
+        <Row>
+            <Col span={12}>
+                <div className="cartIcon" style={{fontSize:12}}>
+                  <ShoppingCartOutlined />
+                </div> 
+            </Col>
+            <Col span={12}>
+              <div className="menuIcon" style={{fontSize:12}} onClick={visible}>
+                <MenuOutlined />
+              </div> 
+            </Col>
+        </Row>
+        </Col>
+      </Row>
+      </Header>
+
       <Drawer
         title="Basic Drawer"
         placement="right"
         onClose={onClose}
-        visible={visible}
-        style={{ position: "absolute" }}
-      >
+        visible={visible}>
+
         <p style={{color:"black"}}>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Drawer>
-    </>
+    </Layout>
   );
 }
