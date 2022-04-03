@@ -8,7 +8,7 @@ export default function Home() {
     <body >
       <div>
         <Common />
-        <div style={{ backgroundColor: "#2E2E2E",marginTop:"10px" }}  layout="fill">
+        <div style={{ backgroundColor: "#2E2E2E"}}  layout="fill">
           <HomePageSlider />
 
           <Search />
