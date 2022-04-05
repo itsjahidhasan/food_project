@@ -1,20 +1,24 @@
+import { Layout } from "antd";
+
 import Common from "../components/layout/common";
 import HomePageSlider from "../components/layout/homePageSlider";
 import Search from "../components/layout/searchBoxSection";
-import Content from "../components/layout/pageContent";
+import PageContent from "../components/layout/pageContent";
 
 export default function Home() {
+  const { Header, Content, Footer } = Layout;
   return (
-    <body >
+    <body>
       <div>
         <Common />
-        <div style={{ backgroundColor: "#2E2E2E"}}  layout="fill">
+
+        <Content style={{ backgroundColor: "#2E2E2E" }} layout="fill">
           <HomePageSlider />
 
           <Search />
 
-          <Content />
-        </div>
+          <PageContent />
+        </Content>
       </div>
     </body>
   );
