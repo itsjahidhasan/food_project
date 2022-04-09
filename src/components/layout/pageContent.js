@@ -68,7 +68,7 @@ export default function content() {
           </Col>
           <Col className="gutter-row" span={12}>
             <div>
-              <Link href="/">
+              <Link href="/checkout">
                 <a>
                   <div className="availableItems">
                     <h1 className="availableImage"></h1>
@@ -134,7 +134,7 @@ export default function content() {
           </Col>
           <Col className="gutter-row" span={24}>
             <div>
-              <Link href="/">
+              <Link href="/login">
                 <a>
                   <div className="allRestaurants-img"></div>
                   <div style={{ marginLeft: "10px" }}>

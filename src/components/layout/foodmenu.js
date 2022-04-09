@@ -20,6 +20,7 @@ export default function FoodMenu() {
         <div className="menu-name">
           <h3>Mutton Kacci Full</h3>
           <p>Price 220 Taka</p>
+
         </div>
         <div className="menu-img">
           <h3>Image</h3>
