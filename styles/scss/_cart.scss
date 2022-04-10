@@ -1,16 +1,16 @@
-
-.back-arrow{
-  font-size: 40px;
-  font-weight: bold;
+.cart-content {
+  width: 95vw;
+  margin-right: 20px;
 }
-.empty-content{
-  margin-top: 10%;
+.cart-content h6 {
+  color: $text-secondary;
 }
-.txt-empty{
-  color: white;
-  text-align: center;
+.edit-icon {
+  justify-content: center;
 }
-.empty-icon{
-  color: white;
-  text-align: center;
+.selected-food h6 {
+  color: $text-secondary;
+}
+.numberInput{
+  width: 30px;
 }

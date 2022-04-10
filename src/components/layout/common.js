@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import Login from "./login";
+import Cart from "./cart";
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -25,9 +26,8 @@ export default function Common() {
     setCartVisible(false);
   };
 
-
   const handleLogin = () => {
-    setIsLoginOpen(!isLoginOpen)
+    setIsLoginOpen(!isLoginOpen);
     setVisible(false);
   };
 
@@ -97,12 +97,13 @@ export default function Common() {
           headerStyle={{ background: "#272727", height: "100hw" }}
           onClose={cartOnClose}
           visible={cartVisible}
-          bodyStyle={{ background: "#272727" }}
+          bodyStyle={{ background: "#000000" }}
           width="100vw"
-        ></Drawer>
+        >
+          <Cart />
+        </Drawer>
       </div>
       <Login isLoginOpen={isLoginOpen}></Login>
-
     </Layout>
   );
 }
