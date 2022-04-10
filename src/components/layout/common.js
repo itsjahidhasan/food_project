@@ -9,11 +9,9 @@ const { SubMenu } = Menu;
 
 export default function Common() {
   const [visible, setVisible] = useState(false);
-<<<<<<< HEAD
   const [cartVisible, setCartVisible] = useState(false);
-=======
+
   const [isLoginOpen, setIsLoginOpen] = useState(false);
->>>>>>> d6d5cdff599e05d571f9acb0fe2a3d6f60e73196
   const showDrawer = () => {
     setVisible(true);
   };
@@ -86,18 +84,12 @@ export default function Common() {
           defaultOpenKeys={["sub1"]}
           mode="inline"
           style={{ background: "none", border: "none" }}
-<<<<<<< HEAD
-=======
-
->>>>>>> d6d5cdff599e05d571f9acb0fe2a3d6f60e73196
         >
           <Menu.Item key="1">Helpline</Menu.Item>
           <Menu.Item key="2">Settings</Menu.Item>
           <Menu.Item key="3">Terms & Conditions/Privacy</Menu.Item>
         </Menu>
       </Drawer>
-
-<<<<<<< HEAD
       <div className="cart">
         <Drawer
           placement="left"
@@ -109,10 +101,8 @@ export default function Common() {
           width="100vw"
         ></Drawer>
       </div>
-=======
       <Login isLoginOpen={isLoginOpen}></Login>
 
->>>>>>> d6d5cdff599e05d571f9acb0fe2a3d6f60e73196
     </Layout>
   );
 }
