@@ -1,0 +1,50 @@
+.body {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 2rem 2rem 0rem 0rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.first {
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#text {
+    color: #ffaa00;
+    font-size: 25px;
+}
+
+.input {
+    margin-bottom: 2rem;
+    border: 1px solid #ffaa00;
+    border-radius: 10px;
+    background-color: black;
+    width: 90%;
+    height: 3rem;
+}
+
+#button {
+    padding: .5rem 2.5rem;
+    margin-top: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    color: black;
+    background-color: #ffaa00;
+    border: none;
+    border-radius: 6px;
+}
+
+.vertical-center {
+    margin: 0;
+
+    text-align: center;
+
+}

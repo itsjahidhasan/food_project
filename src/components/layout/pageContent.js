@@ -74,7 +74,7 @@ export default function content() {
           </Col>
           <Col className="gutter-row" span={12}>
             <div>
-              <Link href="/">
+              <Link href="/checkout">
                 <a>
                   <div className="availableItems">
                     <div className="availableImage">
@@ -148,7 +148,7 @@ export default function content() {
           </Col>
           <Col className="gutter-row" span={24}>
             <div>
-              <Link href="/">
+              <Link href="/login">
                 <a>
                   <div className="allRestaurants-img">
                     <Image height="100%" width="100%" src={"/food5.svg"} />

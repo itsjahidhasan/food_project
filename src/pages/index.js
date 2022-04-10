@@ -5,6 +5,7 @@ import HomePageSlider from "../components/layout/homePageSlider";
 import Search from "../components/layout/searchBoxSection";
 import PageContent from "../components/layout/pageContent";
 
+
 export default function Home() {
   const { Header, Content, Footer } = Layout;
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Search />
 
           <PageContent />
+
         </Content>
       </div>
     </body>
