@@ -2,14 +2,15 @@ import { Input } from 'antd';
 
 export default function Loginotp() {
     return (
-        <body>
-            <h4 id="text">Enter otp</h4>
-            <div>
-                <Input placeholder="Basic usage" />
-                <Input placeholder="Basic usage" />
-                <Input placeholder="Basic usage" />
-                <Input placeholder="Basic usage" />
+        <div className='otp'>
+            <h6 id="text">Enter OTP</h6>
+            <div className='input-field'>
+                <Input className='input-text' />
+                <Input className='input-text' />
+                <Input className='input-text' />
+                <Input className='input-text' />
             </div>
-        </body>
+            <button id='button' >Continue</button>
+        </div>
     );
 };
