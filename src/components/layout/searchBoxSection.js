@@ -1,4 +1,9 @@
 import { Input, Space } from "antd";
+import {
+  FilterOutlined
+} from '@ant-design/icons';
+
+
 
 export default function search() {
   const siftingStyle = {
@@ -8,16 +13,17 @@ export default function search() {
   };
   const lefticon = {
     fontSize: 16,
-    color: "yellow",
+    color: "#FFAA00",
     background: "none",
     marginLeft: "45px",
+    border: "2px solid #DBB154",
     boxShadow: "5px 10px 20px black",
   };
   const searchStyle = {
     fontSize: 16,
     width:300,
     color: "#2E2E2E",
-    border: "2px solid yellow",
+    border: "2px solid #DBB154",
     borderRadius: "15px",
     boxShadow: "5px 10px 20px black",
   };
@@ -29,7 +35,7 @@ export default function search() {
         <div>
           <Search style={searchStyle} />
 
-          <button style={lefticon}>Icon</button>
+          <button style={lefticon}> <FilterOutlined/> </button>
         </div>
       </div>
     </>

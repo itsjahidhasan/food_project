@@ -1,20 +1,25 @@
-.ant-input-search .ant-input, .ant-input-search .ant-input{
-  background-color: #2E2E2E;
+@import "./color";
+.ant-input-search .ant-input,
+.ant-input-search .ant-input {
+  background-color: $backGround-color-primary;
   border: 0;
   border-radius: 65px;
   color: rgb(222, 222, 222);
 }
-.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button:not(.ant-btn-primary) {
   color: rgb(222, 222, 222);
-  background-color: #2E2E2E;
+  background-color: $backGround-color-primary;
   border: 0;
   border-radius: 65px;
 }
 .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child {
-    left: -1px;
-    padding: 0;
-    border: 0;
-    background-color: #2E2E2E;
-    border: 0;
+  left: -1px;
+  padding: 0;
+  border: 0;
+  background-color: $backGround-color-primary;
+  border: 0;
   border-radius: 65px;
 }

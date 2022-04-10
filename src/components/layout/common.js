@@ -7,17 +7,27 @@ const { SubMenu } = Menu;
 
 export default function Common() {
   const [visible, setVisible] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
   };
   const onClose = () => {
     setVisible(false);
   };
+  const cartShowDrawer = () => {
+    setCartVisible(true);
+  };
+  const cartOnClose = () => {
+    setCartVisible(false);
+  };
 
   return (
     <Layout>
       <Affix>
-        <Header className="header" style={{ padding: 0, background: "black" }}>
+        <Header
+          className="header"
+          style={{ padding: 0, background: "#000000" }}
+        >
           <Row>
             <Col span={8}>
               <div className="logo" />
@@ -26,7 +36,11 @@ export default function Common() {
             <Col span={6}>
               <Row>
                 <Col span={12}>
-                  <div className="cartIcon" style={{ fontSize: 25 }}>
+                  <div
+                    className="cartIcon"
+                    style={{ fontSize: 25 }}
+                    onClick={cartShowDrawer}
+                  >
                     <ShoppingCartOutlined />
                   </div>
                 </Col>
@@ -57,14 +71,25 @@ export default function Common() {
           defaultSelectedKeys={["1"]}
           defaultOpenKeys={["sub1"]}
           mode="inline"
-          style={{background:"none",border:"none"}}
-
+          style={{ background: "none", border: "none" }}
         >
           <Menu.Item key="1">Helpline</Menu.Item>
           <Menu.Item key="2">Settings</Menu.Item>
           <Menu.Item key="3">Terms & Conditions/Privacy</Menu.Item>
         </Menu>
       </Drawer>
+
+      <div className="cart">
+        <Drawer
+          placement="left"
+          title="Cart"
+          headerStyle={{ background: "#272727", height: "100hw" }}
+          onClose={cartOnClose}
+          visible={cartVisible}
+          bodyStyle={{ background: "#272727" }}
+          width="100vw"
+        ></Drawer>
+      </div>
     </Layout>
   );
 }

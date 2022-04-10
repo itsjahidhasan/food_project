@@ -12,7 +12,7 @@ export default function Home() {
       <div>
         <Common />
 
-        <Content style={{ backgroundColor: "#2E2E2E" }} layout="fill">
+        <Content style={{ backgroundColor: "#272727" }} layout="fill">
           <HomePageSlider />
 
           <Search />

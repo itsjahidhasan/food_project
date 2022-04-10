@@ -14,14 +14,19 @@ export default function HomePageSlider() {
     <>
       <Carousel autoplay>
         <div>
-           {/* <Image height='100%' width='100%' src={'/vercel.svg'} /> */}
-           <h3 style={contentStyle}>1</h3>
+          <h3 style={contentStyle}>
+            <Image height="100%" width="100%" src={"/food1.svg"} />
+          </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+          <h3 style={contentStyle}>
+            <Image height="100%" width="100%" src={"/food2.svg"} />
+          </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+          <h3 style={contentStyle}>
+            <Image height="100%" width="100%" src={"/food3.svg"} />
+          </h3>
         </div>
       </Carousel>
     </>
