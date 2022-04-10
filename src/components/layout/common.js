@@ -71,15 +71,9 @@ export default function Common() {
           style={{ background: "none", border: "none" }}
 
         >
-          {/* <Menu.Item onClick={handleLogin} key="1">login/signup</Menu.Item> */}
-
-          {/* <Link href='/login' passHref><a>
-            <Menu.Item key="1">login/signup</Menu.Item></a>
-          </Link> */}
-
-          <Menu.Item key="2">Helpline</Menu.Item>
-          <Menu.Item key="3">Settings</Menu.Item>
-          <Menu.Item key="4">Terms & Conditions/Privacy</Menu.Item>
+          <Menu.Item key="1">Helpline</Menu.Item>
+          <Menu.Item key="2">Settings</Menu.Item>
+          <Menu.Item key="3">Terms & Conditions/Privacy</Menu.Item>
         </Menu>
       </Drawer>
 

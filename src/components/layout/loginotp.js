@@ -1,4 +1,5 @@
 import { Input } from 'antd';
+import Link from "next/link";
 
 export default function Loginotp() {
     return (
@@ -10,7 +11,10 @@ export default function Loginotp() {
                 <Input className='input-text' />
                 <Input className='input-text' />
             </div>
-            <button id='button' >Continue</button>
+            <Link href='/logInFinish'>
+                <a ><button id='button'>Continue</button></a>
+
+            </Link>
         </div>
     );
 };
