@@ -1,5 +1,5 @@
 import { Input } from 'antd';
-
+import Link from "next/link";
 export default function LoginFinish() {
     return (
         <div className='finish'>
@@ -7,10 +7,11 @@ export default function LoginFinish() {
             <Input id='input-field' />
             <p id='text'> Email</p>
             <Input id='input-field' />
-            <div className='button'>
-                <button id='button' >Finish</button>
-            </div>
-
+            <Link href="/" passHref>
+                <div className='button'>
+                    <button id='button'>Finish</button>
+                </div>
+            </Link>
         </div>
     );
 };

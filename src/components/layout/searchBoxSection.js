@@ -1,7 +1,5 @@
 import { Input, Space } from "antd";
-import {
-  FilterOutlined
-} from '@ant-design/icons';
+import { ControlOutlined } from '@ant-design/icons';
 
 
 
@@ -21,7 +19,7 @@ export default function search() {
   };
   const searchStyle = {
     fontSize: 16,
-    width:300,
+    width: 300,
     color: "#2E2E2E",
     border: "2px solid #DBB154",
     borderRadius: "15px",
@@ -35,7 +33,7 @@ export default function search() {
         <div>
           <Search style={searchStyle} />
 
-          <button style={lefticon}> <FilterOutlined/> </button>
+          <button style={lefticon}> <ControlOutlined /> </button>
         </div>
       </div>
     </>

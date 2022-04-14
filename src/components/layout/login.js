@@ -37,8 +37,8 @@ export default function Login({ isLoginOpen = true }) {
                 <div className="vertical-center">
                     <Input className="input" placeholder="Basic usage" />
                     <p> <span> <Checkbox /></span> I agree to the terms and Conditions</p>
-                    <Link href='/loginotp'>
-                        <a ><button id='button'>Continue</button></a>
+                    <Link href="/loginotp" passHref>
+                        <button id='button'>Continue</button>
 
                     </Link>
                 </div>

@@ -11,9 +11,8 @@ export default function Loginotp() {
                 <Input className='input-text' />
                 <Input className='input-text' />
             </div>
-            <Link href='/logInFinish'>
-                <a ><button id='button'>Continue</button></a>
-
+            <Link href='/logInFinish' passHref>
+                <button id='button'>Continue</button>
             </Link>
         </div>
     );
