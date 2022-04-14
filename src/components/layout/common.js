@@ -4,7 +4,11 @@ import Router from 'next/router';
 import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import Login from "./login";
+<<<<<<< HEAD
 import OrdersHistory from "../ordersHistory";
+=======
+import Cart from "./cart";
+>>>>>>> acd56b10a87c9f663538e5362a7a27209bc04dc1
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -27,9 +31,8 @@ export default function Common() {
     setCartVisible(false);
   };
 
-
   const handleLogin = () => {
-    setIsLoginOpen(!isLoginOpen)
+    setIsLoginOpen(!isLoginOpen);
     setVisible(false);
   };
   
@@ -105,9 +108,11 @@ export default function Common() {
           headerStyle={{ background: "#272727", height: "100hw" }}
           onClose={cartOnClose}
           visible={cartVisible}
-          bodyStyle={{ background: "#272727" }}
+          bodyStyle={{ background: "#000000" }}
           width="100vw"
-        ></Drawer>
+        >
+          <Cart />
+        </Drawer>
       </div>
       <Login isLoginOpen={isLoginOpen}></Login>
       {/* <OrdersHistory ordersPage={ordersPage}></OrdersHistory> */}
