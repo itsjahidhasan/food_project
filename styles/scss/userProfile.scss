@@ -5,12 +5,21 @@
     height: 100%;
   
 }
-.header{
+.headers{
+    display: flex;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
    
+}
+.arrow{
+    position: absolute;
+    left: 5px;
 }
 #icon{
   text-align: center;
+  margin-bottom: 0;
 }
 .inputs {
    

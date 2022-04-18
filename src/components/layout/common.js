@@ -34,6 +34,12 @@ export default function Common() {
     setVisible(false);
   };
   
+  const logout = () => {
+    
+    setIsLoginOpen(!isLoginOpen);
+    setVisible(false);
+  };
+  
 
   return (
     <Layout>
@@ -94,9 +100,9 @@ export default function Common() {
           <Menu.Item key="2" onClick={()=>Router.push('./userProfile')}>Profile</Menu.Item>
           <Menu.Item key="3"onClick={()=>Router.push('./adress')}>Addresses</Menu.Item>
           <Menu.Item key="4" onClick={()=>Router.push('./helpCenter')}>Help Center</Menu.Item>
-          <Menu.Item key="5">Settings</Menu.Item>
-          <Menu.Item key="6">Terms & Conditions/Privacy</Menu.Item>
-          <Menu.Item key="7">Log Out</Menu.Item>
+          <Menu.Item key="5" onClick={()=>Router.push('./setting')}>Settings</Menu.Item>
+          <Menu.Item key="6" onClick={()=>Router.push('./terms')}>Terms & Conditions/Privacy</Menu.Item>
+          <Menu.Item key="7" onClick={logout}>Log Out</Menu.Item>
         </Menu>
       </Drawer>
       <div className="cart">

@@ -5,8 +5,8 @@ export default function Report (){
    
     return(
         <div className="report">
-<div className='header'>
-            <ArrowLeftOutlined onClick={() => Router.back()} style={{ fontSize: '25px'}}
+<div className='headers'>
+            <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
         <p id='icon'> Report & Feedback</p>
         </div>

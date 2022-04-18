@@ -4,8 +4,8 @@ import Router from 'next/router'
 export default function HelpCenter(){
     return(
         <div className='profile'>
-            <div className='header'>
-            <ArrowLeftOutlined onClick={() => Router.back()} style={{ fontSize: '25px'}}
+            <div className='headers'>
+            <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
         <p id='icon'> Help Center</p>
         </div>

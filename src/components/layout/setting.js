@@ -2,7 +2,7 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import Router from 'next/router'
 import { Input } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
-export default function UserProfile(){
+export default function Setting(){
 
 
     return(
@@ -12,9 +12,8 @@ export default function UserProfile(){
             />
         <p id='icon'> Profile</p>
         </div>
-        <Input  className='inputs' size="large" placeholder="Name " suffix={<EditOutlined />} />
-        <Input  className='inputs' size="large" placeholder="Number" suffix={<EditOutlined />} />
-        <Input  className='inputs' size="large" placeholder="Email" suffix={<EditOutlined />} />
+        <Input  className='inputs' size="large" placeholder="Language" suffix={<EditOutlined />} />
+       
       </div>
     )
 }

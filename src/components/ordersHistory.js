@@ -5,11 +5,11 @@ export default function OrdersHistory(){
 
     return(
         <div className='order'>
-            <div className='title'>
-            <ArrowLeftOutlined onClick={() => Router.back()} id='icon' style={{ fontSize: '25px'}}
+           <div className='headers'>
+            <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
-        <p id='icon'> Order History</p>
-      </div>
+        <p id='icon'> Order Histroy</p>
+        </div>
            
             <Orders></Orders>
             <Orders></Orders>
