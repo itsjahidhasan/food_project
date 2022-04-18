@@ -1,14 +1,13 @@
 import { ArrowLeftOutlined, PhoneFilled,MessageOutlined, WarningOutlined } from "@ant-design/icons";
 import Router from 'next/router'
 
-
 export default function HelpCenter(){
     return(
         <div className='profile'>
             <div className='header'>
             <ArrowLeftOutlined onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
-        <p id='icon'> Adressess</p>
+        <p id='icon'> Help Center</p>
         </div>
        <div>
        <UserAdress></UserAdress>
@@ -38,7 +37,7 @@ function UserAdress(){
                     <MessageOutlined />
                     </div>
             </div>
-        <div className="helpline">
+        <div className="helpline" onClick={()=>Router.push('./report')}>
                 <div className="help">
                   <p id="add">Report & Feedback</p>
                  </div>

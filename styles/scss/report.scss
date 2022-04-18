@@ -1,0 +1,27 @@
+.report{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+}
+.reports{
+    padding: .5rem 2rem;
+    margin-top: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    background-color: #ffaa00;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#input{
+
+    margin-top: 4rem;
+    border: 1px solid #ffaa00;
+    border-radius: 10px;
+    background-color: black;
+    width: 80%;
+    height: 10rem;
+}
