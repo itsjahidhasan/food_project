@@ -1,14 +1,12 @@
 import React from 'react';
 import { ArrowLeftOutlined } from "@ant-design/icons";
-import Link from "next/link";
+import Router from 'next/router'
 export default function OrdersHistory(){
-    
-    
-   
+
     return(
         <div className='order'>
             <div className='title'>
-            <ArrowLeftOutlined id='icon' style={{ fontSize: '25px'}}
+            <ArrowLeftOutlined onClick={() => Router.back()} id='icon' style={{ fontSize: '25px'}}
             />
         <p id='icon'> Order History</p>
       </div>

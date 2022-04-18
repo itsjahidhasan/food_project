@@ -4,11 +4,9 @@ import Router from 'next/router';
 import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import Login from "./login";
-<<<<<<< HEAD
 import OrdersHistory from "../ordersHistory";
-=======
+
 import Cart from "./cart";
->>>>>>> acd56b10a87c9f663538e5362a7a27209bc04dc1
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -94,8 +92,8 @@ export default function Common() {
           {/* <Menu.Item key="1" onClick={handleOrder} >Orders</Menu.Item> */}
           <Menu.Item key="1" onClick={()=>Router.push('../ordersHistory')} >Orders</Menu.Item>
           <Menu.Item key="2" onClick={()=>Router.push('./userProfile')}>Profile</Menu.Item>
-          <Menu.Item key="3">Addresses</Menu.Item>
-          <Menu.Item key="4">Help Center</Menu.Item>
+          <Menu.Item key="3"onClick={()=>Router.push('./adress')}>Addresses</Menu.Item>
+          <Menu.Item key="4" onClick={()=>Router.push('./helpCenter')}>Help Center</Menu.Item>
           <Menu.Item key="5">Settings</Menu.Item>
           <Menu.Item key="6">Terms & Conditions/Privacy</Menu.Item>
           <Menu.Item key="7">Log Out</Menu.Item>

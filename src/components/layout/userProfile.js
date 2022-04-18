@@ -1,16 +1,14 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
-import Link from "next/link";
+import Router from 'next/router'
 import { Input } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
 export default function UserProfile(){
-const back =()=>{
 
-}
 
     return(
         <div className='profile'>
             <div className='header'>
-            <ArrowLeftOutlined onClick={back} id='icon' style={{ fontSize: '25px'}}
+            <ArrowLeftOutlined onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
         <p id='icon'> Profile</p>
         </div>
