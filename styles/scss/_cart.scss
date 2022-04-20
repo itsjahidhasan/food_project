@@ -1,6 +1,6 @@
 @import './color';
 .checkout-btn-container{
-  justify-items: center;
+  margin-left: 15vw;
 }
 .checkout-btn{
   position: fixed;
@@ -28,8 +28,7 @@
   justify-items: center;
 }
 .cart-content {
-  width: 95vw;
-  margin-right: 20px;
+  width: 87vw;
 }
 .cart-content h6 {
   color: $text-secondary;
