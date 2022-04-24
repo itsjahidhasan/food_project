@@ -30,7 +30,7 @@ export default function cart() {
         </Row>
 
         <Row gutter={16} className="odered-items">
-          <Col className="gutter-row" span={14}>
+          <Col className="gutter-row" span={10}>
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
@@ -43,7 +43,7 @@ export default function cart() {
               </Row>
             </div>
           </Col>
-          <Col className="gutter-row" span={10}>
+          <Col className="gutter-row" span={14}>
             <div>
               <Row>
                 <Col span={4}>
@@ -56,7 +56,7 @@ export default function cart() {
                     <input className="numberInput" type={Number} value={1} />
                   </div>
                 </Col>
-                <Col span={5}>
+                <Col span={4}>
                   <div>
                     <MinusSquareOutlined style={{ fontSize: 30 }} />
                   </div>
@@ -72,7 +72,7 @@ export default function cart() {
         </Row>
 
         <Row gutter={16}>
-          <Col className="gutter-row" span={14}>
+          <Col className="gutter-row" span={10}>
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
@@ -85,7 +85,7 @@ export default function cart() {
               </Row>
             </div>
           </Col>
-          <Col className="gutter-row" span={10}>
+          <Col className="gutter-row" span={14}>
             <div>
               <Row>
                 <Col span={4}>

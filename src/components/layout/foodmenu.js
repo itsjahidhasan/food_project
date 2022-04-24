@@ -1,26 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Row, Col } from "antd";
 export default function FoodMenu() {
   return (
     <>
       <div className="header">
-        <Link href="/" passHref>
-          <a
-            className="back-arrow"
-            style={{ color: "yellow", marginLeft: "10px" }}
-          >
-            &#8592;
-          </a>
-        </Link>
-        <h3 style={{ color: "yellow", float: "right", marginRight: "190px" }}>
-          Haji Biriyani
-        </h3>
+        <Row span={16}>
+          <Col span={8}>
+            <Link href="/" passHref>
+              <a className="back-arrow">&#8592;</a>
+            </Link>
+          </Col>
+          <Col>
+          <span className=""><h3>Haji Biriyani</h3></span>
+          </Col>
+        </Row>
       </div>
       <div className="menu-content">
         <div className="menu-name">
           <h3>Mutton Kacci Full</h3>
           <p>Price 220 Taka</p>
-
         </div>
         <div className="menu-img">
           <h3>Image</h3>
