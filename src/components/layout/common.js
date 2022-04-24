@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Router from 'next/router';
 import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import Login from "./login";
-import OrdersHistory from "../ordersHistory";
-
 import Cart from "./cart";
+
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -35,8 +33,6 @@ export default function Common() {
   };
   
   const logout = () => {
-    
-    setIsLoginOpen(!isLoginOpen);
     setVisible(false);
   };
   
@@ -86,7 +82,7 @@ export default function Common() {
         onClose={onClose}
         visible={visible}
         bodyStyle={{ background: "#141414" }}
-        width="290px"
+        width="240px"
       >
         <Menu
           defaultSelectedKeys={["1"]}

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import { Row, Col, Divider, InputNumber, Radio,Input, Space } from "antd";
 import {
@@ -7,6 +7,25 @@ import {
   MinusSquareOutlined,
 } from "@ant-design/icons";
 export default function cart() {
+
+  const [count, setCount] = useState();
+  const [price, setPrice]= useState();
+
+  const increaseCount =()=>{
+    const newCount = (count + 1);
+    // newCount={updatePrice};
+    setCount(newCount);
+  }
+  const decreaseCount =()=>{
+    if (count > 0){
+      const newCount = count - 1;
+      setCount(newCount)
+    }
+  //  const updatePrice =()=>{
+  //  const newPrice = count * price ;
+  //  setPrice(newPrice)
+  // }
+}
   return (
     <>
       <div className="cart-content">
@@ -47,23 +66,24 @@ export default function cart() {
             <div>
               <Row>
                 <Col span={4}>
-                  <div>
+                  <div onClick={increaseCount}>
                     <PlusSquareOutlined style={{ fontSize: 30 }} />
                   </div>
                 </Col>
                 <Col span={4}>
+
                   <div className="numberInput">
-                    <input className="numberInput" type={Number} value={1} />
+                    <input className="numberInput" type={Number} value={count} />
                   </div>
                 </Col>
                 <Col span={5}>
-                  <div>
+                  <div onClick={decreaseCount}>
                     <MinusSquareOutlined style={{ fontSize: 30 }} />
                   </div>
                 </Col>
                 <Col span={9}>
                   <div>
-                    <p>480 taka</p>
+                    <p>{price} taka</p>
                   </div>
                 </Col>
               </Row>
@@ -89,17 +109,17 @@ export default function cart() {
             <div>
               <Row>
                 <Col span={4}>
-                  <div>
+                  <div onClick={increaseCount}>
                     <PlusSquareOutlined style={{ fontSize: 30 }} />
                   </div>
                 </Col>
                 <Col span={4}>
                   <div className="numberInput">
-                    <input className="numberInput" type={Number} value={1} />
+                    <input className="numberInput" type={Number} value={count} />
                   </div>
                 </Col>
                 <Col span={5}>
-                  <div>
+                  <div onClick={decreaseCount}>
                     <MinusSquareOutlined style={{ fontSize: 30 }} />
                   </div>
                 </Col>

@@ -18,18 +18,20 @@
 }
 
 #text {
-    color: #ffaa00;
+    color: $text-primary;
     font-size: 25px;
 }
 
 .input {
     margin-bottom: 2rem;
-    border: 1px solid #ffaa00;
+    border: 1px solid $color-primary;
     border-radius: 10px;
     background-color: black;
     width: 90%;
     height: 3rem;
+    color: white;
 }
+
 * {
     box-sizing: border-box;
     color: #fda900;

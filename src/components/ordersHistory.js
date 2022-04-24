@@ -20,7 +20,7 @@ export default function OrdersHistory(){
 function Orders(){
     return(
             <div className="orders">
-                <div>
+                <div onClick={()=>Router.push('./reorder')}>
                   <p>Order ID #289187</p>
                   <p>Mutton Biriyani, Chicken leg...</p>
                 </div>

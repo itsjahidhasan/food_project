@@ -1,0 +1,51 @@
+.reorder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #0A0A0A;
+    
+}
+#nav{
+    background-color: #141414;
+}
+p{
+    color: white;
+    font-size: 12px;
+}
+.ord{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 0;
+   
+}
+.ord .right{
+    text-align: right;
+}
+.ord .left{
+    text-align: left;
+}
+
+.ant-divider-horizontal {
+    display: flex;
+     width: 80%; 
+    margin: 12px 0;
+  
+}
+
+.detail{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2px;
+}
+#bold{
+    font-weight: bold;
+}
+.reorder .button{
+    text-align: center;
+   padding-bottom: 2rem;
+}
+.divider{
+    display: flex;
+  justify-content: center;
+}
