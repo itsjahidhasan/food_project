@@ -1,34 +1,32 @@
-@import './color';
-.checkout-btn-container{
-  margin-left: 15vw;
+@import "./color";
+.checkout-btn-container {
+  display: flex;
+  justify-content: center;
 }
-.checkout-btn{
+.checkout-btn {
   position: fixed;
   background-color: $text-primary;
   color: $backGround-color-secondary;
-  font-size: medium;
+  font-size: 14px;
   font-weight: 700;
-  width: 60%;
-  height: 7%;
+  width: 250px;
+  height: 40px;
   bottom: 50px;
   border: 0px;
-  border-radius: 20px;
+  border-radius: 22px;
   justify-items: center;
   z-index: 1;
 }
-.add-promo-btn{
+.add-promo-btn {
   background-color: $text-primary;
   color: $backGround-color-secondary;
-  font-size: medium;
+  font-size: 12px;
   font-weight: 700;
   width: 90%;
-  height: 60%;
+  height: 50%;
   border: 0px;
   border-radius: 8px;
   justify-items: center;
-}
-.cart-content {
-  width: 87vw;
 }
 .cart-content h6 {
   color: $text-secondary;
@@ -39,24 +37,31 @@
 }
 .selected-food h6 {
   color: $text-secondary;
+  font-size: 12px;
 }
-.numberInput{
-  width: 100%;
+.selected-food p {
+  font-size: 11px;
+}
+.numberInput {
+  width: 27px;
+  height: 27px;
   background-color: $backGround-color-primary;
   border: 1px solid $text-primary;
+  text-align: center;
   font-size: medium;
   font-weight: 600;
+  color: white;
 }
-.odered-items{
+.odered-items {
   border-top: 3px solid $backGround-color-primary;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
-.amount{
+.amount {
   text-align: right;
   padding-right: 6px;
 }
-.total-amount{
+.total-amount {
   background-color: $backGround-color-primary;
   height: 100px;
 }

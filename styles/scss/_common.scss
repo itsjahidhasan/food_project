@@ -1,4 +1,4 @@
-@import './color';
+@import "./color";
 .ant-menu-item-selected {
   background-color: #141414 !important;
   border: none;
@@ -27,4 +27,7 @@
 }
 .cartIcon:hover {
   cursor: pointer;
+}
+.cart .ant-drawer-header{
+  color: #FFAA00;
 }

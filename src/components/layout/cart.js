@@ -8,8 +8,8 @@ import {
 } from "@ant-design/icons";
 export default function cart() {
 
-  const [count, setCount] = useState();
-  const [price, setPrice]= useState();
+  const [count, setCount] = useState(0);
+  const [price, setPrice]= useState(0);
 
   const increaseCount =()=>{
     const newCount = (count + 1);
