@@ -58,16 +58,14 @@ export default function Common() {
                 <Col span={12}>
                   <div
                     className="cartIcon"
-                    style={{ fontSize: 25 }}
-                    onClick={cartShowDrawer}
-                  >
-                    <ShoppingCartOutlined />
+                    style={{ fontSize: 25 }}>
+                    <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
                   </div>
                 </Col>
                 <Col span={12}>
                   <div
                     className="menuIcon"
-                    style={{ fontSize: 25 }}
+                    style={{ fontSize: 25, color:'white' }}
                     onClick={showDrawer}
                   >
                     <MenuOutlined />
@@ -92,13 +90,14 @@ export default function Common() {
           defaultSelectedKeys={["1"]}
           defaultOpenKeys={["sub1"]}
           mode="inline"
+          theme="light"
           style={{ background: "none", border: "none" }}
         >
           <Menu.Item key="0" onClick={handleLogin}>
             Login / Sign Up
           </Menu.Item>
           {/* <Menu.Item key="1" onClick={handleOrder} >Orders</Menu.Item> */}
-          <Menu.Item key="1" onClick={() => Router.push("../ordersHistory")}>
+          <Menu.Item key="1" style={{color:'white'}} onClick={() => Router.push("../ordersHistory")}>
             Orders
           </Menu.Item>
           <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>

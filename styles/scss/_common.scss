@@ -22,12 +22,20 @@
   border-bottom: 1px solid #f0f0f0;
   border-radius: 2px 2px 0 0;
 }
+#icon{
+  color: #f0f0f0;
+}
 .menuIcon:hover {
   cursor: pointer;
 }
 .cartIcon:hover {
   cursor: pointer;
 }
-.cart .ant-drawer-header{
-  color: #FFAA00;
+
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content, .ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+  flex: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
 }

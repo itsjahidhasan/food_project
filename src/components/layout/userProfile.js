@@ -12,9 +12,9 @@ export default function UserProfile(){
             />
         <p id='icon'> Profile</p>
         </div>
-        <Input  className='inputs' size="large" placeholder="Name " suffix={<EditOutlined />} />
-        <Input  className='inputs' size="large" placeholder="Number" suffix={<EditOutlined />} />
-        <Input  className='inputs' size="large" placeholder="Email" suffix={<EditOutlined />} />
+        <Input style={{ height:65, color:'red'}} className='inputs' size="large" placeholder={'name'} suffix={<EditOutlined />} />
+        <Input style={{ height:65}}  className='inputs' size="large" placeholder="Number" suffix={<EditOutlined />} />
+        <Input style={{ height:65}} className='inputs' size="large" placeholder="Email" suffix={<EditOutlined />} />
       </div>
     )
 }
