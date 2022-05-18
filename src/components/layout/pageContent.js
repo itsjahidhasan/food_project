@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Row, Col, Divider,Drawer } from "antd";
+import { Row, Col, Divider, Drawer } from "antd";
 export default function content() {
   return (
     <>
@@ -17,9 +17,9 @@ export default function content() {
                 <a>
                   <div className="favoriteItems">
                     <div className="favoriteImage">
-                      <Image height="100%" width="100%" src={"/food1.svg"} />
+                      <Image height={100} width={100} src={"/food2.svg"} />
                     </div>
-                    <div style={{ marginLeft: "10px" }}>
+                    <div className="favoriteItemTxt">
                       <h6 className="txtStyle">Haji Biriyani</h6>
                       <span className="subTextStyle">4 items</span>
                     </div>

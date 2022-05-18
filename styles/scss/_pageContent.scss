@@ -1,4 +1,4 @@
-@import './color';
+@import "./color";
 .headerStyle {
   font-size: 26px;
   font-weight: bold;
@@ -18,7 +18,7 @@
 .favoriteContent {
   margin-left: 0.9vw;
 }
-.favoriteImage {
+.favoriteItems > .favoriteImage {
   height: 27vh;
   width: 45vw;
   color: #fff;
@@ -29,10 +29,15 @@
   border: 2px solid #2e2e2e;
   border-radius: 15px;
 }
+.favoriteItems > .favoriteItemTxt {
+  margin-left: 10px;
+}
 .favoriteItems {
   margin-top: 15px;
   float: left;
   padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .availableContent {
   margin-left: 0.9vw;
@@ -62,7 +67,7 @@
   width: 90vw;
 }
 .allRestaurants-img {
-  width:95vw;
+  width: 95vw;
   height: 230px;
   color: #fff;
   background: #364d79;
