@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import Router from 'next/router';
+import Router from "next/router";
 import Link from "next/link";
 import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import Login from "./login";
 import Cart from "./cart";
-
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -34,8 +33,6 @@ export default function Common() {
   };
 
   const logout = () => {
-
-
     setIsLoginOpen(!isLoginOpen);
 
     setVisible(false);
@@ -56,16 +53,14 @@ export default function Common() {
             <Col span={6}>
               <Row>
                 <Col span={12}>
-                  <div
-                    className="cartIcon"
-                    style={{ fontSize: 25 }}>
+                  <div className="cartIcon" style={{ fontSize: 25 }}>
                     <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
                   </div>
                 </Col>
                 <Col span={12}>
                   <div
                     className="menuIcon"
-                    style={{ fontSize: 25, color:'white' }}
+                    style={{ fontSize: 25, color: "white" }}
                     onClick={showDrawer}
                   >
                     <MenuOutlined />
@@ -97,7 +92,11 @@ export default function Common() {
             Login / Sign Up
           </Menu.Item>
           {/* <Menu.Item key="1" onClick={handleOrder} >Orders</Menu.Item> */}
-          <Menu.Item key="1" style={{color:'white'}} onClick={() => Router.push("../ordersHistory")}>
+          <Menu.Item
+            key="1"
+            style={{ color: "white" }}
+            onClick={() => Router.push("../ordersHistory")}
+          >
             Orders
           </Menu.Item>
           <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
@@ -134,7 +133,7 @@ export default function Common() {
           className="cart"
           bodyStyle={{
             background: "#000000",
-            padding: 0
+            padding: 0,
           }}
           size="320px"
         >

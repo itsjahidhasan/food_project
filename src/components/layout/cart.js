@@ -48,7 +48,8 @@ export default function cart() {
               <Row>
                 <Col span={4}>
                   <div>
-                    <MinusSquareOutlined style={{ fontSize: 27 }} />
+                    <button className="decrease-button">-</button>
+                    {/* <MinusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
                 <Col span={4}>
@@ -58,7 +59,8 @@ export default function cart() {
                 </Col>
                 <Col span={4}>
                   <div>
-                    <PlusSquareOutlined style={{ fontSize: 27 }} />
+                    <button className="increase-button">+</button>
+                    {/* <PlusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
                 <Col span={9} className="amount">
@@ -90,7 +92,8 @@ export default function cart() {
               <Row>
                 <Col span={4}>
                   <div>
-                    <MinusSquareOutlined style={{ fontSize: 27 }} />
+                    <button className="decrease-button">-</button>
+                    {/* <MinusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
                 <Col span={4}>
@@ -100,7 +103,8 @@ export default function cart() {
                 </Col>
                 <Col span={4}>
                   <div>
-                    <PlusSquareOutlined style={{ fontSize: 27 }} />
+                    <button className="increase-button">+</button>
+                    {/* <PlusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
                 <Col span={9} className="amount">
