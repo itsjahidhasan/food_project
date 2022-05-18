@@ -1,7 +1,5 @@
 import { Input, Space } from "antd";
-import { ControlOutlined } from '@ant-design/icons';
-
-
+import { ControlOutlined } from "@ant-design/icons";
 
 export default function search() {
   const siftingStyle = {
@@ -11,7 +9,7 @@ export default function search() {
   };
   const lefticon = {
     fontSize: 16,
-    color: "#FFAA00",
+    color: "#141414",
     background: "none",
     marginLeft: "45px",
     border: "2px solid #DBB154",
@@ -33,7 +31,10 @@ export default function search() {
         <div>
           <Search style={searchStyle} />
 
-          <button style={lefticon}> <ControlOutlined /> </button>
+          <button style={lefticon}>
+            {" "}
+            <ControlOutlined />{" "}
+          </button>
         </div>
       </div>
     </>

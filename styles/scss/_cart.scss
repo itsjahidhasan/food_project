@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
 }
+.row-padding{
+  padding: 24px;
+}
 .checkout-btn {
   position: fixed;
   background-color: $text-primary;
@@ -43,14 +46,17 @@
   font-size: 11px;
 }
 .numberInput {
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
   background-color: $backGround-color-primary;
   border: 1px solid $text-primary;
   text-align: center;
   font-size: medium;
   font-weight: 600;
   color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 1px;
 }
 .odered-items {
   border-top: 3px solid $backGround-color-primary;

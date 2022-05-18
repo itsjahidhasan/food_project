@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Row, Col, Divider } from "antd";
+import { Row, Col, Divider,Drawer } from "antd";
 export default function content() {
   return (
     <>
@@ -13,7 +13,7 @@ export default function content() {
         <Row gutter={16} justify="center">
           <Col className="gutter-row" span={12}>
             <div>
-              <Link href="/foodmenu">
+              <Link href="./foodmenu">
                 <a>
                   <div className="favoriteItems">
                     <div className="favoriteImage">

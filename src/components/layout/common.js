@@ -132,7 +132,10 @@ export default function Common() {
           onClose={cartOnClose}
           visible={cartVisible}
           className="cart"
-          bodyStyle={{ background: "#000000" }}
+          bodyStyle={{
+            background: "#000000",
+            padding: 0
+          }}
           size="320px"
         >
           <Cart />
