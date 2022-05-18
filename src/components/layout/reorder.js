@@ -1,4 +1,4 @@
-import { ArrowLeftOutlined } from "@ant-design/icons";
+import { ArrowLeftOutlined, BgColorsOutlined } from "@ant-design/icons";
 import Router from 'next/router'
 import { Divider } from 'antd';
 import Image from "next/image";
@@ -6,7 +6,8 @@ export default function Reorder(){
     return(
         <div  className="reorder">
                 <div id="nav" className='headers'>
-                <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
+                <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px',
+                  color:'#ffaa00'}}
                 />
                 </div>
                 <div>
