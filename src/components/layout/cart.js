@@ -1,31 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Row, Col, Divider, InputNumber, Radio,Input, Space } from "antd";
+import { Row, Col, Divider, InputNumber, Radio, Input, Space } from "antd";
 import {
   EditOutlined,
   PlusSquareOutlined,
   MinusSquareOutlined,
 } from "@ant-design/icons";
 export default function cart() {
-
-  const [count, setCount] = useState(0);
-  const [price, setPrice]= useState(0);
-
-  const increaseCount =()=>{
-    const newCount = (count + 1);
-    // newCount={updatePrice};
-    setCount(newCount);
-  }
-  const decreaseCount =()=>{
-    if (count > 0){
-      const newCount = count - 1;
-      setCount(newCount)
-    }
-  //  const updatePrice =()=>{
-  //  const newPrice = count * price ;
-  //  setPrice(newPrice)
-  // }
-}
   return (
     <>
       <div className="cart-content">
@@ -33,7 +14,7 @@ export default function cart() {
           <button className="checkout-btn">Checkout</button>
         </div>
 
-        <Row gutter={16}>
+        <Row gutter={16} className="row-padding">
           <Col className="gutter-row" span={12}>
             <div>
               <h6>Address</h6>
@@ -48,8 +29,8 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items">
-          <Col className="gutter-row" span={14}>
+        <Row gutter={16} className="odered-items row-padding">
+          <Col className="gutter-row" span={12}>
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
@@ -62,28 +43,27 @@ export default function cart() {
               </Row>
             </div>
           </Col>
-          <Col className="gutter-row" span={10}>
+          <Col className="gutter-row" span={12}>
             <div>
               <Row>
                 <Col span={4}>
-                  <div onClick={increaseCount}>
-                    <PlusSquareOutlined style={{ fontSize: 30 }} />
+                  <div>
+                    <MinusSquareOutlined style={{ fontSize: 27 }} />
                   </div>
                 </Col>
                 <Col span={4}>
-
-                  <div className="numberInput">
-                    <input className="numberInput" type={Number} value={count} />
-                  </div>
-                </Col>
-                <Col span={5}>
-                  <div onClick={decreaseCount}>
-                    <MinusSquareOutlined style={{ fontSize: 30 }} />
-                  </div>
-                </Col>
-                <Col span={9}>
                   <div>
-                    <p>{price} taka</p>
+                    <input className="numberInput" type={Number} value={0} />
+                  </div>
+                </Col>
+                <Col span={4}>
+                  <div>
+                    <PlusSquareOutlined style={{ fontSize: 27 }} />
+                  </div>
+                </Col>
+                <Col span={9} className="amount">
+                  <div>
+                    <p>180 taka</p>
                   </div>
                 </Col>
               </Row>
@@ -91,8 +71,8 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16}>
-          <Col className="gutter-row" span={14}>
+        <Row gutter={16} className="row-padding">
+          <Col className="gutter-row" span={12}>
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
@@ -105,25 +85,25 @@ export default function cart() {
               </Row>
             </div>
           </Col>
-          <Col className="gutter-row" span={10}>
+          <Col className="gutter-row" span={12}>
             <div>
               <Row>
                 <Col span={4}>
-                  <div onClick={increaseCount}>
-                    <PlusSquareOutlined style={{ fontSize: 30 }} />
+                  <div>
+                    <MinusSquareOutlined style={{ fontSize: 27 }} />
                   </div>
                 </Col>
                 <Col span={4}>
-                  <div className="numberInput">
-                    <input className="numberInput" type={Number} value={count} />
+                  <div>
+                    <input className="numberInput" type={Number} value={0} />
                   </div>
                 </Col>
-                <Col span={5}>
-                  <div onClick={decreaseCount}>
-                    <MinusSquareOutlined style={{ fontSize: 30 }} />
+                <Col span={4}>
+                  <div>
+                    <PlusSquareOutlined style={{ fontSize: 27 }} />
                   </div>
                 </Col>
-                <Col span={9}>
+                <Col span={9} className="amount">
                   <div>
                     <p>300 taka</p>
                   </div>
@@ -133,7 +113,7 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items">
+        <Row gutter={16} className="odered-items row-padding">
           <Col className="gutter-row" span={14}>
             <div className="selected-food">
               <Row>
@@ -156,7 +136,7 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items">
+        <Row gutter={16} className="odered-items row-padding">
           <Col className="gutter-row" span={14}>
             <div className="selected-food">
               <Row>
@@ -178,7 +158,7 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items total-amount">
+        <Row gutter={16} className="odered-items total-amount row-padding">
           <Col className="gutter-row" span={14}>
             <div className="selected-food">
               <Row>
@@ -199,7 +179,7 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items">
+        <Row gutter={16} className="odered-items row-padding">
           <Col className="gutter-row" span={24}>
             <div className="selected-food">
               <Row>
@@ -207,9 +187,15 @@ export default function cart() {
                   <h6>Payment method</h6>
                   <Radio.Group>
                     <Space direction="vertical">
-                      <Radio value={1}><h6>Cash on Delivery</h6></Radio>
-                      <Radio value={2}><h6>Card</h6></Radio>
-                      <Radio value={3}><h6>Bkash</h6></Radio>
+                      <Radio value={1}>
+                        <h6>Cash on Delivery</h6>
+                      </Radio>
+                      <Radio value={2}>
+                        <h6>Card</h6>
+                      </Radio>
+                      <Radio value={3}>
+                        <h6>Bkash</h6>
+                      </Radio>
                     </Space>
                   </Radio.Group>
                 </Col>
@@ -218,7 +204,7 @@ export default function cart() {
           </Col>
         </Row>
 
-        <Row gutter={16} className="odered-items total-amount">
+        <Row gutter={16} className="odered-items total-amount row-padding">
           <Col className="gutter-row" span={14}>
             <div className="selected-food">
               <Row>
