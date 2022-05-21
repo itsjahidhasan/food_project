@@ -9,7 +9,7 @@ import Cart from "./cart";
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
-export default function Common() {
+export default function Common({children}) {
   const [visible, setVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -54,6 +54,7 @@ export default function Common() {
               <Row>
                 <Col span={12}>
                   <div className="cartIcon" style={{ fontSize: 25 }}>
+               
                     <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
                   </div>
                 </Col>
@@ -117,6 +118,9 @@ export default function Common() {
           <Menu.Item key="7" onClick={logout}>
             Log Out
           </Menu.Item>
+          <Menu.Item key="8" onClick={() => Router.push("./webLogin")}>
+          Web Login
+          </Menu.Item>
         </Menu>
       </Drawer>
       <div className="cart">
@@ -140,8 +144,9 @@ export default function Common() {
           <Cart />
         </Drawer>
       </div>
-      <Login isLoginOpen={isLoginOpen}></Login>
-      {/* <OrdersHistory ordersPage={ordersPage}></OrdersHistory> */}
+      <div> {children}</div>
+      {/* <Login isLoginOpen={isLoginOpen}></Login> */}
+     
     </Layout>
   );
 }

@@ -8,7 +8,6 @@ export default function Login({ isLoginOpen = true }) {
     const onClose = () => {
         setVisible(false);
     };
-
     useEffect(() => {
         setVisible(isLoginOpen)
     }, [isLoginOpen]);
