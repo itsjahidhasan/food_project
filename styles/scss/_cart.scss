@@ -4,6 +4,7 @@
   justify-content: center;
 }
 .row-padding {
+  padding-top: 25px;
   padding-left: 15px;
 }
 .decrease-button {
@@ -60,6 +61,7 @@
 }
 .cart-content h6 {
   color: $text-secondary;
+  font-weight: bold;
 }
 .edit-icon {
   text-align: right;

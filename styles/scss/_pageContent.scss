@@ -1,4 +1,4 @@
-@import './color';
+@import "./color";
 .headerStyle {
   font-size: 26px;
   font-weight: bold;
@@ -28,6 +28,9 @@
   margin-right: 20px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
+}
+.favoriteItemTxt {
+  margin-left: 10px;
 }
 .favoriteItems {
   margin-top: 15px;
@@ -62,7 +65,7 @@
   width: 90vw;
 }
 .allRestaurants-img {
-  width:95vw;
+  width: 95vw;
   height: 230px;
   color: #fff;
   background: #364d79;
@@ -71,4 +74,49 @@
   margin-bottom: 15px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
+  background-size: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-prev {
+  left: 1px !important;
+  color: black !important;
+  background-color: $color-primary;
+  padding: 36px 21px;
+  border-radius: 7px;
+}
+.swiper-button-next {
+  right: 1px !important;
+  color: black !important;
+  background-color: $color-primary;
+  padding: 36px 21px;
+  border-radius: 7px;
 }

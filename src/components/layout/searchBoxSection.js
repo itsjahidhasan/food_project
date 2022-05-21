@@ -27,7 +27,7 @@ export default function search() {
 
   return (
     <>
-      <div style={siftingStyle}>
+      <div style={siftingStyle} className="search-box-section">
         <div>
           <Search style={searchStyle} />
 

@@ -22,7 +22,7 @@
   border-bottom: 1px solid #f0f0f0;
   border-radius: 2px 2px 0 0;
 }
-#icon{
+#icon {
   color: #f0f0f0;
 }
 .menuIcon:hover {
@@ -32,13 +32,38 @@
   cursor: pointer;
 }
 
-.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content, .ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root
+  .ant-menu-submenu-title
+  > .ant-menu-title-content {
   flex: auto;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
 }
+<<<<<<< HEAD
 // .menuIcon{
 //   display: none;
 // }
+=======
+.header-search-box-section {
+  font-size: 16;
+  color: "#0000007D !important";
+  background: "#141414";
+  margin-left: "45px";
+  border: "2px solid #DBB154";
+  box-shadow: "5px 10px 20px black";
+}
+
+@media (max-width: 420px) {
+  .header2 {
+    display: none;
+  }
+}
+@media (min-width: 421px) {
+  .header1 {
+    display: none;
+  }
+}
+>>>>>>> 8d2fb3dd8be1a0e66baebfd70cc4d7fc5e66213e
