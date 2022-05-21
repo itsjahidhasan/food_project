@@ -16,8 +16,13 @@ export default function content() {
               <Link href="./foodmenu">
                 <a>
                   <div className="favoriteItems">
-                    <div className="favoriteImage">
-                      <Image height={100} width={100} src={"/food2.svg"} />
+                    <div>
+                      {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
+                      <img
+                        src="/food2.svg"
+                        alt="image1"
+                        className="favoriteImage"
+                      />
                     </div>
                     <div className="favoriteItemTxt">
                       <h6 className="txtStyle">Haji Biriyani</h6>
@@ -33,8 +38,13 @@ export default function content() {
               <Link href="/">
                 <a>
                   <div className="favoriteItems">
-                    <div className="favoriteImage">
-                      <Image height="100%" width="100%" src={"/food2.svg"} />
+                    <div>
+                      {/* <Image height="100%" width="100%" src={"/food2.svg"} /> */}
+                      <img
+                        src="/Rectangle 5062.svg"
+                        alt="image1"
+                        className="favoriteImage"
+                      />
                     </div>
                     <div style={{ marginLeft: "10px" }}>
                       <h6 className="txtStyle">Hanif Biriyani</h6>
@@ -60,8 +70,13 @@ export default function content() {
               <Link href="/foodmenu">
                 <a>
                   <div className="availableItems">
-                    <div className="availableImage">
-                      <Image height="100%" width="100%" src={"/food3.svg"} />
+                    <div>
+                      {/* <Image height="100%" width="100%" src={"/food3.svg"} /> */}
+                      <img
+                        src="/food3.svg"
+                        alt="image1"
+                        className="availableImage"
+                      />
                     </div>
                     <div style={{ marginLeft: "10px" }}>
                       <h6 className="txtStyle">Haji Biriyani</h6>
@@ -77,8 +92,13 @@ export default function content() {
               <Link href="/checkout">
                 <a>
                   <div className="availableItems">
-                    <div className="availableImage">
-                      <Image height="100%" width="100%" src={"/food4.svg"} />
+                    <div>
+                      {/* <Image height="100%" width="100%" src={"/food4.svg"} /> */}
+                      <img
+                        src="/food4.svg"
+                        alt="image1"
+                        className="availableImage"
+                      />
                     </div>
                     <div style={{ marginLeft: "10px" }}>
                       <h6 className="txtStyle">Hanif Biriyani</h6>
@@ -104,8 +124,13 @@ export default function content() {
               <Link href="/foodmenu">
                 <a>
                   <div className="allRestaurants-items">
-                    <div className="allRestaurants-img">
-                      <Image height="100%" width="100%" src={"/food1.svg"} />
+                    <div>
+                      {/* <Image height="100%" width="100%" src={"/food1.svg"} /> */}
+                      <img
+                        src="/Rectangle 5065.svg"
+                        alt="image1"
+                        className="allRestaurants-img"
+                      />
                     </div>
                     <div style={{ marginLeft: "10px" }}>
                       <h6 className="txtStyle">Bismillah Kabab Ghor</h6>
@@ -121,7 +146,7 @@ export default function content() {
               <Link href="/">
                 <a>
                   <div className="allRestaurants-img">
-                    <Image height="100%" width="100%" src={"/food2.svg"} />
+                    <Image height="100%" width="100%" src={"/Rectangle 506.svg"} />
                   </div>
                   <div style={{ marginLeft: "10px" }}>
                     <h6 className="txtStyle">Bhai Bhai Biriyani House</h6>
@@ -136,7 +161,7 @@ export default function content() {
               <Link href="/">
                 <a>
                   <div className="allRestaurants-img">
-                    <Image height="100%" width="100%" src={"/food3.svg"} />
+                    <Image height="100%" width="100%" src={"/Rectangle 5061.svg"} />
                   </div>
                   <div style={{ marginLeft: "10px" }}>
                     <h6 className="txtStyle">Bhai Bhai Biriyani House</h6>
@@ -151,7 +176,7 @@ export default function content() {
               <Link href="/login">
                 <a>
                   <div className="allRestaurants-img">
-                    <Image height="100%" width="100%" src={"/food5.svg"} />
+                    <Image height="100%" width="100%" src={"/Rectangle 5062.svg"} />
                   </div>
                   <div style={{ marginLeft: "10px" }}>
                     <h6 className="txtStyle">Grand Nawab Restaurant</h6>

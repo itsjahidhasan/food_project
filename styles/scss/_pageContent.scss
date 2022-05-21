@@ -18,7 +18,7 @@
 .favoriteContent {
   margin-left: 0.9vw;
 }
-.favoriteItems > .favoriteImage {
+.favoriteImage {
   height: 27vh;
   width: 45vw;
   color: #fff;
@@ -29,15 +29,13 @@
   border: 2px solid #2e2e2e;
   border-radius: 15px;
 }
-.favoriteItems > .favoriteItemTxt {
+.favoriteItemTxt {
   margin-left: 10px;
 }
 .favoriteItems {
   margin-top: 15px;
   float: left;
   padding-bottom: 25px;
-  display: flex;
-  flex-direction: column;
 }
 .availableContent {
   margin-left: 0.9vw;
@@ -76,4 +74,5 @@
   margin-bottom: 15px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
+  background-size: cover;
 }
