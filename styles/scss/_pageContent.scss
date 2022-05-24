@@ -4,6 +4,12 @@
   font-weight: bold;
   color: $text-primary;
   background: none;
+}
+.viewAllStyle {
+  font-size: 22px;
+  font-weight: bold;
+  color: $text-primary;
+  background: none;
   margin-bottom: 30px;
 }
 .txtStyle {
@@ -15,68 +21,61 @@
   color: $text-secondary;
   background: none;
 }
-.favoriteContent {
-  margin-left: 0.9vw;
+.content {
+  padding: 2%;
 }
-.favoriteImage {
+.contentHeader {
+  text-align: left;
+  background: none;
+}
+.viewAll {
+  text-align: right;
+}
+.contentImage {
   height: 27vh;
   width: 45vw;
   color: #fff;
   line-height: 160px;
   text-align: center;
-  background: #364d79;
   margin-right: 20px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
 }
-.favoriteItemTxt {
+.contentItemTxt {
   margin-left: 10px;
 }
-.favoriteItems {
+.contentItems {
   margin-top: 15px;
   float: left;
   padding-bottom: 25px;
 }
-.availableContent {
-  margin-left: 0.9vw;
-}
-.availableImage {
-  height: 27vh;
-  width: 45vw;
+.restaurantImage {
+  height: 30vh;
+  width: 30vw;
   color: #fff;
   line-height: 160px;
   text-align: center;
-  background: #364d79;
   margin-right: 20px;
   border: 2px solid #2e2e2e;
   border-radius: 15px;
 }
-.availableItems {
-  margin-top: 15px;
-  float: left;
-  padding-bottom: 25px;
+.more-btn {
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
 }
-.allRestaurants {
-  margin-left: 0.9vw;
+.more-btn button {
+  background-color: $text-primary;
+  color: $backGround-color-secondary;
+  font-size: 26px;
+  font-weight: 700;
+  width: 25vw;
+  height: 11vh;
+  bottom: 50px;
+  border: 0px;
+  border-radius: 50px;
+  justify-items: center;
 }
-.allRestaurants-items {
-  margin-top: 15px;
-  padding-bottom: 25px;
-  width: 90vw;
-}
-.allRestaurants-img {
-  width: 95vw;
-  height: 230px;
-  color: #fff;
-  background: #364d79;
-  margin-right: 20px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  border: 2px solid #2e2e2e;
-  border-radius: 15px;
-  background-size: cover;
-}
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -119,4 +118,53 @@
   background-color: $color-primary;
   padding: 36px 21px;
   border-radius: 7px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: 34% !important;
+}
+
+footer {
+  height: 18vh;
+  background-color: black;
+  line-height: 18vh;
+  padding: 0px 35px;
+  font-size: small;
+}
+
+@media (max-width: 426px) {
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+@media (max-width: 426px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+@media (max-width: 426px) {
+  .headerStyle {
+    font-size: 18px;
+  }
+  .viewAll {
+    display: none;
+  }
+  .all-restaurants {
+    display: none;
+  }
+  .more-btn {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  .restaurantImage {
+    height: 30vh;
+    width: 95vw;
+  }
+}
+@media (min-width: 426px) {
+  .restaurants-mobile-view {
+    display: none;
+  }
 }
