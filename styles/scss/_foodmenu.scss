@@ -1,28 +1,39 @@
-
 .header {
-  background: #2e2e2e;
+  background: #141414;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 .back-arrow {
   font-weight: bold;
-  font-size:xx-large;
-  
+  font-size: xx-large;
 }
 
-h3{
+h3 {
   color: white;
 }
-.menu-content{
+.menu-content {
   margin-top: 20px;
-  height: 90px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 15px;
   border-bottom: 3px solid #2e2e2e;
 }
-.menu-name{
+.menu-name {
   float: left;
 }
-.menu-img{
+.menu-name span {
+  display: block;
+}
+.menu-name .food-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+.menu-name .food-price {
+  font-size: 13px;
+  font-weight: 200;
+}
+.menu-img {
+  width: 16vw;
+  height: 8vh;
   float: right;
 }

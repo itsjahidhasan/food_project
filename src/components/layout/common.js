@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Router from "next/router";
 import Link from "next/link";
 import { Input, Space } from "antd";
-import { Drawer, Layout, Menu, Row, Col, Affix } from "antd";
+import { Drawer, Layout, Menu, Row, Col, Affix, Dropdown, Button } from "antd";
 
 import {
   MenuOutlined,
@@ -15,6 +15,37 @@ import Cart from "./cart";
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
+
+const menu = (
+  <Menu
+    items={[
+      {
+        key: '1',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+            1st menu item
+          </a>
+        ),
+      },
+      {
+        key: '2',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+            2nd menu item
+          </a>
+        ),
+      },
+      {
+        key: '3',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+            3rd menu item
+          </a>
+        ),
+      },
+    ]}
+  />
+);
 
 export default function Common({ children }) {
   const [visible, setVisible] = useState(false);
