@@ -6,7 +6,8 @@ export default function UserProfile(){
 
 
     return(
-        <div className='profile'>
+      
+            <div className='profile'>
             <div className='headers'>
             <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
@@ -16,5 +17,6 @@ export default function UserProfile(){
         <Input style={{ height:65}}  className='inputs' size="large" placeholder="Number" suffix={<EditOutlined />} />
         <Input style={{ height:65}} className='inputs' size="large" placeholder="Email" suffix={<EditOutlined />} />
       </div>
+      
     )
 }

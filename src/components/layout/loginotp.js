@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Loginotp() {
     return (
-        <div className='otp'>
+      <div className="otpbox">
+            <div className='otp'>
             <h6 id="text">Enter OTP</h6>
             <div className='input-field'>
                 <Input className='input-text' />
@@ -15,5 +16,6 @@ export default function Loginotp() {
                 <button id='button'>Continue</button>
             </Link>
         </div>
+      </div>
     );
 };

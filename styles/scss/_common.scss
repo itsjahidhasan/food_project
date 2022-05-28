@@ -42,11 +42,7 @@
   text-overflow: ellipsis;
   color: white;
 }
-<<<<<<< HEAD
-// .menuIcon{
-//   display: none;
-// }
-=======
+
 .header-search-box-section {
   font-size: 16;
   color: "#0000007D !important";
@@ -57,13 +53,12 @@
 }
 
 @media (max-width: 420px) {
-  .header2 {
-    display: none;
-  }
-}
-@media (min-width: 421px) {
   .header1 {
     display: none;
   }
 }
->>>>>>> 8d2fb3dd8be1a0e66baebfd70cc4d7fc5e66213e
+@media (min-width: 421px) {
+  .header2 {
+     display: none;
+  }
+}
