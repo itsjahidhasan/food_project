@@ -71,7 +71,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -93,7 +93,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -115,7 +115,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -137,7 +137,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -159,7 +159,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -230,7 +230,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -252,7 +252,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -274,7 +274,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -296,7 +296,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -318,7 +318,29 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
+                        alt="image1"
+                        className="contentImage"
+                      />
+                    </div>
+                    <div className="contentItemTxt">
+                      <h6 className="txtStyle">Haji Biriyani</h6>
+                      <span className="subTextStyle">4 items</span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <Link href="./foodmenu">
+                <a>
+                  <div className="contentItems">
+                    <div>
+                      {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
+                      <img
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -335,6 +357,7 @@ export default function content() {
         </Swiper>
       </div>
 
+      {/* top sell content */}
       <Divider orientation="left"></Divider>
       <div className="content">
         <Row>
@@ -388,7 +411,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -410,7 +433,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -432,7 +455,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -454,7 +477,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -476,7 +499,51 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/food2.svg"
+                        src="/food2.png"
+                        alt="image1"
+                        className="contentImage"
+                      />
+                    </div>
+                    <div className="contentItemTxt">
+                      <h6 className="txtStyle">Haji Biriyani</h6>
+                      <span className="subTextStyle">4 items</span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <Link href="./foodmenu">
+                <a>
+                  <div className="contentItems">
+                    <div>
+                      {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
+                      <img
+                        src="/food2.png"
+                        alt="image1"
+                        className="contentImage"
+                      />
+                    </div>
+                    <div className="contentItemTxt">
+                      <h6 className="txtStyle">Haji Biriyani</h6>
+                      <span className="subTextStyle">4 items</span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div>
+              <Link href="./foodmenu">
+                <a>
+                  <div className="contentItems">
+                    <div>
+                      {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
+                      <img
+                        src="/food2.png"
                         alt="image1"
                         className="contentImage"
                       />
@@ -492,8 +559,7 @@ export default function content() {
           </SwiperSlide>
         </Swiper>
       </div>
-
-      {/* All restaurants */}
+      {/* all restaurants content */}
       <Divider orientation="left"></Divider>
       <div className="content">
         <Row>
@@ -521,7 +587,7 @@ export default function content() {
                       <div>
                         {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                         <img
-                          src="/Rectangle 597.png"
+                          src="/food3.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -542,7 +608,7 @@ export default function content() {
                     <div className="contentItems">
                       <div>
                         <img
-                          src="/Rectangle 598.png"
+                          src="/food5.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -564,7 +630,7 @@ export default function content() {
                       <div>
                         {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                         <img
-                          src="/Rectangle 596.png"
+                          src="/food4.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -589,7 +655,7 @@ export default function content() {
                       <div>
                         {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                         <img
-                          src="/Rectangle 597.png"
+                          src="/food3.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -610,7 +676,7 @@ export default function content() {
                     <div className="contentItems">
                       <div>
                         <img
-                          src="/Rectangle 598.png"
+                          src="/food5.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -632,7 +698,7 @@ export default function content() {
                       <div>
                         {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                         <img
-                          src="/Rectangle 596.png"
+                          src="/food4.png"
                           alt="image1"
                           className="restaurantImage"
                         />
@@ -663,7 +729,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/Rectangle 597.png"
+                        src="/food3.png"
                         alt="image1"
                         className="restaurantImage"
                       />
@@ -684,7 +750,7 @@ export default function content() {
                   <div className="contentItems">
                     <div>
                       <img
-                        src="/Rectangle 598.png"
+                        src="/food5.png"
                         alt="image1"
                         className="restaurantImage"
                       />
@@ -706,7 +772,7 @@ export default function content() {
                     <div>
                       {/* <Image height={100} width={100} src={"/food2.svg"} /> */}
                       <img
-                        src="/Rectangle 596.png"
+                        src="/food4.png"
                         alt="image1"
                         className="restaurantImage"
                       />
