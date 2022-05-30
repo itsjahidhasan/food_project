@@ -68,6 +68,7 @@ h3 {
 .food-menu-web-view {
   background-color: #2e2e2e;
   height: 100vh;
+  padding-top: 10px;
 }
 @media (max-width: 426px) {
   .food-menu-web-view {
@@ -82,8 +83,16 @@ h3 {
   .food-menu-mobile-view {
     display: none;
   }
+  .food-add-view {
+    background-color: #141414;
+    width: 257px;
+    margin-left: 18px;
+    padding-top: 10px;
+    border-radius: 20px;
+  }
   .food-menu-web-view .food-add-view .food-img-container .food-img {
-    width: 300px;
+    width: 220px;
+    height: -webkit-fit-content;
     padding: 0px 0px 0px 0px;
   }
   .food-menu-web-view .food-price {
@@ -92,5 +101,9 @@ h3 {
   .food-menu-web-view .food-info {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .menu-img {
+    width: 50px;
+    height: auto;
   }
 }

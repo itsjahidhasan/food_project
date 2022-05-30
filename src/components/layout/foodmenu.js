@@ -33,8 +33,8 @@ export default function FoodMenu() {
 
       <div className="food-menu-web-view">
         <Row utter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-          <Col className="gutter-row" span={8}></Col>
-          <Col className="gutter-row" span={8}>
+          <Col className="gutter-row" span={6}></Col>
+          <Col className="gutter-row" span={10}>
             <MainContent></MainContent>
           </Col>
           <Col className="gutter-row" span={8}>
@@ -68,7 +68,7 @@ function MainContent() {
           </Col>
           <Col span={8}>
             <div>
-              <img src="/food1.svg" alt="image1" className="menu-img" />
+              <img src="/food1.png" alt="image1" className="menu-img" />
             </div>
           </Col>
         </Row>
