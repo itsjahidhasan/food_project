@@ -23,26 +23,45 @@ export default function FoodMenu() {
         </div>
 
         <MainContent></MainContent>
-        <MainContent></MainContent>
-        <MainContent></MainContent>
-        <MainContent></MainContent>
-        <MainContent></MainContent>
-        <MainContent></MainContent>
-        <MainContent></MainContent>
       </div>
 
       <div className="food-menu-web-view">
         <Row utter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-          <Col className="gutter-row" span={6}></Col>
-          <Col className="gutter-row" span={10}>
+          <Col className="gutter-row" span={6}>
+            <RestaurantsName></RestaurantsName>
+          </Col>
+          <Col className="gutter-row" span={8}>
             <MainContent></MainContent>
           </Col>
+          <Col className="gutter-row" span={2}></Col>
           <Col className="gutter-row" span={8}>
             <div>
               <FoodAddView></FoodAddView>
             </div>
           </Col>
         </Row>
+      </div>
+    </>
+  );
+}
+
+function RestaurantsName() {
+  return (
+    <>
+      <div className="restaurants-name">
+        <span>Haji Biriyani</span>
+      </div>
+      <div className="restaurants-name">
+        <span>Haji Biriyani</span>
+      </div>
+      <div className="restaurants-name">
+        <span>Haji Biriyani</span>
+      </div>
+      <div className="restaurants-name">
+        <span>Haji Biriyani</span>
+      </div>
+      <div className="restaurants-name">
+        <span>Haji Biriyani</span>
       </div>
     </>
   );
@@ -58,6 +77,96 @@ function MainContent() {
   };
   return (
     <>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="menu-content" onClick={showDrawer}>
+        <Row>
+          <Col span={16}>
+            <div className="menu-name">
+              <span className="food-name">Mutton Kacci Full</span>
+              <span className="food-price">Price 220 Taka</span>
+            </div>
+          </Col>
+          <Col span={8}>
+            <div>
+              <img src="/food1.png" alt="image1" className="menu-img" />
+            </div>
+          </Col>
+        </Row>
+      </div>
       <div className="menu-content" onClick={showDrawer}>
         <Row>
           <Col span={16}>
@@ -115,6 +224,44 @@ function FoodAddView() {
               <span className="food-price">220 Taka</span>
             </Col>
           </Row>
+          <div>
+            <Row>
+              <Col span={12}>
+                <input type="radio" value="Half" name="size" />
+                <span className="food-name">Half</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={12}>
+                <input type="radio" value="Full" name="size" />
+                <span className="food-name">Full</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={12}>
+                <input type="checkbox" value="Extra Meat" name="extraMeat" />
+                <span className="food-name">Extra Meat</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={12}>
+                <input type="checkbox" value="Add Coke" name="Coke" />
+                <span className="food-name">Add Coke</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+          </div>
         </div>
       </div>
     </>

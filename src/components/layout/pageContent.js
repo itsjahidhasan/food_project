@@ -805,8 +805,8 @@ export default function content() {
           <Col span={6}>
             <span></span>
           </Col>
-          <Col span={4}>
-            <span>Copyrights2022@owldhaka.com</span>
+          <Col span={6}>
+            <span style={{ float: "right" }}>Copyrights2022@owldhaka.com</span>
           </Col>
         </Row>
       </footer>

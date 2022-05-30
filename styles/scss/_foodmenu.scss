@@ -70,6 +70,24 @@ h3 {
   height: 100vh;
   padding-top: 10px;
 }
+.restaurants-name {
+  margin-bottom: 1px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 10px 10px 0px;
+}
+.restaurants-name span {
+  padding: 10px 70px 10px 20px;
+}
+
+.restaurants-name :hover {
+  background-color: white;
+  color: #141414;
+  border-radius: 1px 24px 21px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 70px 10px 20px;
+}
 @media (max-width: 426px) {
   .food-menu-web-view {
     display: none;
@@ -105,5 +123,11 @@ h3 {
   .menu-img {
     width: 50px;
     height: auto;
+  }
+  .menu-content {
+    border-radius: 15px;
+  }
+  .menu-content:focus {
+    border: 1px solid white;
   }
 }
