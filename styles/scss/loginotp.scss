@@ -35,6 +35,9 @@
     border: 2px solid #554627;
     width: 3.5rem;
     height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 #text {
@@ -52,4 +55,16 @@
     background-color: #ffaa00;
     border: none;
     border-radius: 6px;
+}
+
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
+    .otpbox{
+       
+    }
+    .otp{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 }

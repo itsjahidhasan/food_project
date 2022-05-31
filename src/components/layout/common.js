@@ -1,14 +1,49 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import { Drawer, Input,Dropdown, Space, Layout, Menu, Row, Col, Affix } from "antd";
+import { Drawer, Input, Layout, Menu, Row, Col, Affix } from "antd";
 import {MenuOutlined, ShoppingCartOutlined,UserOutlined,} from "@ant-design/icons";
+
+import Link from "next/link";
+
+
 import Cart from "./cart";
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
 
-export default function Common({children}) {
+const menu = (
+  <Menu
+    items={[
+      {
+        key: '1',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+            1st menu item
+          </a>
+        ),
+      },
+      {
+        key: '2',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+            2nd menu item
+          </a>
+        ),
+      },
+      {
+        key: '3',
+        label: (
+          <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+            3rd menu item
+          </a>
+        ),
+      },
+    ]}
+  />
+);
+
+export default function Common({ children }) {
   const [visible, setVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -40,8 +75,10 @@ export default function Common({children}) {
   return (
     <Layout>
       <Affix>
-       <div>
+
+    
        <Header
+
           className="header1"
           style={{ padding: 0, background: "#000000" }}
         >
@@ -55,7 +92,6 @@ export default function Common({children}) {
               <Row>
                 <Col span={12}>
                   <div className="cartIcon" style={{ fontSize: 25 }}>
-               
                     <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
                   </div>
                 </Col>
@@ -74,7 +110,7 @@ export default function Common({children}) {
         </Header>
         <Header
           className="header2"
-          style={{ padding: 0, background: "#141414" }}
+          style={{ padding: 0, background: "#141414"}}
         >
           <Row>
             <Col span={4}>
@@ -84,9 +120,9 @@ export default function Common({children}) {
             <Col span={16}>
               <Row>
                 <Col span={18}>
-                  <div className="header-search-box-section">
-                    <div>
-                      <Search />
+                  <div>
+                    <div className="search-box-container">
+                      <Search className="header-search-box-section" />
                     </div>
                   </div>
                 </Col>
@@ -112,7 +148,7 @@ export default function Common({children}) {
             </Col>
           </Row>
         </Header>
-       </div>
+
       </Affix>
 
       <Drawer
@@ -161,7 +197,7 @@ export default function Common({children}) {
             Log Out
           </Menu.Item>
           <Menu.Item key="8" onClick={() => Router.push("./webLogin")}>
-          Web Login
+            Web Login
           </Menu.Item>
         </Menu>
       </Drawer>
@@ -187,6 +223,9 @@ export default function Common({children}) {
         </Drawer>
       </div>
       <div> {children}</div>
+
+      {/* <Login isLoginOpen={isLoginOpen}></Login> */}
+
     </Layout>
   );
 }

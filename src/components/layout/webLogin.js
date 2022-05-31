@@ -2,53 +2,100 @@ import { Input, Checkbox } from 'antd';
 import Link from "next/link";
 import Common from './common';
 import React, { useState } from 'react'
-import { Otp } from './otp';
+
+
 
 export default function WebLogin() {
-//     const [visible, setVisible] = useState(false);
-//     const [showComponent, setShowComponent] = useState(false);
-
-// const handleClick = () => {
-//     setShowComponent(showComponent) 
-//     setVisible(false)
-// }
+    const [phone, setPhone] = useState('');
+    const [error, setError] = useState('')
+    const [validNum, setValidNum] = useState(false)
+   
     
+
+
+    const handleClick = () => {
+
+        if (phone.length != 11) {
+            setError('Please enter a valid number')
+            console.log('wrong number');
+
+        }
+        else {
+            setValidNum(true)
+            console.log(phone);
+        }
+
+
+
+    }
+    const getvalue = (val) => {
+        setPhone(val.target.value);
+    }
+   
+
     return (
         <Common>
-  <div className="signup">
-    <div className='weblog'>
-           
-            <h2 id='webtitle'>Login / Sign Up</h2>
-                    <Input className="input" placeholder="Number" />
-                    <p> <span> <Checkbox /></span> I agree to the terms and Conditions</p>
-                    <Link href="/loginotp" passHref>
-                        <button id='button'>Continue</button>
-                    </Link>
-                    {/* <button id='button' onClick={Pto}>Continue</button> */}
-            
-        </div>
-  </div>
-  
+            <div className="signup">
+                <div className='weblog'>
+
+                    <h2 id='webtitle'>Login / Sign Up</h2>
+                    {!validNum ?
+                        (<div>
+                            <Input className="input" placeholder="Number" onChange={getvalue} />
+                            <p id='err'>{error}</p>
+                            <p> <span> <Checkbox /></span> I agree to the terms and Conditions</p>
+                           
+                                <button id='button' onClick={handleClick}>Continue</button>
+                            
+                        </div>) : (
+                            <div>
+                                <Pto></Pto>
+                               
+                            </div>)
+                    }
+                </div>
+            </div>
+
         </Common>
-        
-     
+
+
     );
 };
 
-// function Pto(){
-//     return(
-//         <div className='otp'>
-//             <h6 id="text">Enter OTP</h6>
-//             <div className='input-field'>
-//                 <Input className='input-text' />
-//                 <Input className='input-text' />
-//                 <Input className='input-text' />
-//                 <Input className='input-text' />
-//             </div>
-//             {/* <Link href='/logInFinish' passHref>
-//                 <button id='button'>Continue</button>
-//             </Link> */}
-//         </div>
-//     )
-// }
+
+function Pto(){
+    const [validOtp, setValidOtp]=useState('')
+    const [seeOtp, setSeeOtp]=useState(false)
+
+    const getotp=(ot)=>{
+       setValidOtp(ot.target.value);
+       console.log(ot.target.value);
+       
+    }
+    const valid =()=>{
+        console.log('cliked');
+        setSeeOtp(true);
+        console.log(validOtp);
+    }
+    return(
+        <div>
+            <h6 id="text">Enter OTP</h6>
+            <div >
+            <form action=""></form>
+                 <Input.Group className='input-field' onChange={getotp} >
+                 <Input  className='input-text' maxLength={1}  />
+                 <Input className='input-text' maxLength={1} />
+                 <Input className='input-text' maxLength={1} />
+                 <Input className='input-text' maxLength={1} />
+                 </Input.Group>
+            
+                
+                
+            </div>
+            <Link href='' passHref>
+                <button id='button' onClick={valid}>Continue</button>
+            </Link>
+        </div>
+    )
+}
 
