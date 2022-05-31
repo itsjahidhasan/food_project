@@ -3,7 +3,7 @@ import { Carousel } from "antd";
 
 export default function HomePageSlider() {
   const contentStyle = {
-    height: "80",
+    height: "50vh",
     backgroundSize: "cover",
     backgroundPosition: "right center",
     width: "100%",
@@ -16,13 +16,13 @@ export default function HomePageSlider() {
     <>
       <Carousel autoplay>
         <div>
-          <img src="/VALENTINE POST-01.svg" alt="image1" style={contentStyle} />
+          <img src="/food4.png" alt="image1" style={contentStyle} />
         </div>
         <div>
-          <img src="/VALENTINE POST-01.svg" alt="image1" style={contentStyle} />
+          <img src="/o.png" alt="image1" style={contentStyle} />
         </div>
         <div>
-          <img src="/VALENTINE POST-01.svg" alt="image1" style={contentStyle} />
+          <img src="/food3.png" alt="image1" style={contentStyle} />
         </div>
       </Carousel>
     </>
