@@ -30,10 +30,11 @@ export default function FoodMenu() {
           <Col className="gutter-row" span={6}>
             <RestaurantsName></RestaurantsName>
           </Col>
-          <Col className="gutter-row" span={8}>
+          <Col className="gutter-row" span={1}></Col>
+          <Col className="gutter-row" span={7}>
             <MainContent></MainContent>
           </Col>
-          <Col className="gutter-row" span={2}></Col>
+          <Col className="gutter-row" span={1}></Col>
           <Col className="gutter-row" span={8}>
             <div>
               <FoodAddView></FoodAddView>
@@ -225,7 +226,7 @@ function FoodAddView() {
             </Col>
           </Row>
           <div>
-            <Row>
+            <Row className="row-gap">
               <Col span={12}>
                 <input type="radio" value="Half" name="size" />
                 <span className="food-name">Half</span>
@@ -234,7 +235,7 @@ function FoodAddView() {
                 <span className="food-price">220 Taka</span>
               </Col>
             </Row>
-            <Row>
+            <Row className="row-gap">
               <Col span={12}>
                 <input type="radio" value="Full" name="size" />
                 <span className="food-name">Full</span>
@@ -243,7 +244,7 @@ function FoodAddView() {
                 <span className="food-price">220 Taka</span>
               </Col>
             </Row>
-            <Row>
+            <Row className="row-gap">
               <Col span={12}>
                 <input type="checkbox" value="Extra Meat" name="extraMeat" />
                 <span className="food-name">Extra Meat</span>
@@ -252,13 +253,46 @@ function FoodAddView() {
                 <span className="food-price">220 Taka</span>
               </Col>
             </Row>
-            <Row>
+            <Row className="row-gap">
               <Col span={12}>
                 <input type="checkbox" value="Add Coke" name="Coke" />
                 <span className="food-name">Add Coke</span>
               </Col>
               <Col span={12}>
                 <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+
+            <Row className="order-row-gap">
+              <Col span={18}>
+                <Row>
+                  <Col span={4}>
+                    <div>
+                      <button className="order-number-button">-</button>
+                      {/* <MinusSquareOutlined style={{ fontSize: 27 }} /> */}
+                    </div>
+                  </Col>
+                  <Col span={4}>
+                    <div>
+                      <input
+                        className="orderNumberInput"
+                        type={Number}
+                        value={0}
+                      />
+                    </div>
+                  </Col>
+                  <Col span={4}>
+                    <div>
+                      <button className="order-number-button">+</button>
+                      {/* <PlusSquareOutlined style={{ fontSize: 27 }} /> */}
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col span={6}>
+                <Row>
+                  <button className="add-order-btn">Add</button>
+                </Row>
               </Col>
             </Row>
           </div>
