@@ -1,7 +1,18 @@
-.otp {
+.otpbox{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height:100%;
+ background-color: #000000;
+}
+
+.otp {
+   
+  margin: 15rem auto;
+   justify-content: center;
+   border: 3px solid #554627;
+   border-radius: 8px;
+    width: 40%;
+    height: 50%;
     background-color: #141414;
     text-align: center;
     padding: 1rem;
@@ -10,7 +21,7 @@
 .input-field {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border: none;
     margin: auto;
     margin-top: 2rem;
@@ -24,6 +35,9 @@
     border: 2px solid #554627;
     width: 3.5rem;
     height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 #text {
@@ -41,4 +55,16 @@
     background-color: #ffaa00;
     border: none;
     border-radius: 6px;
+}
+
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
+    .otpbox{
+       
+    }
+    .otp{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 }

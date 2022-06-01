@@ -57,12 +57,14 @@
 }
 
 @media (max-width: 420px) {
-  .header2 {
-    display: none;
-  }
-}
-@media (min-width: 421px) {
   .header1 {
     display: none;
   }
 }
+
+@media (min-width: 421px) {
+  .header2 {
+     display: none;
+  }
+}
+

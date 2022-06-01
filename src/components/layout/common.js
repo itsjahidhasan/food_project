@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import Link from "next/link";
-import { Input, Space } from "antd";
-import { Drawer, Layout, Menu, Row, Col, Affix, Dropdown, Button } from "antd";
+import { Drawer, Input, Layout, Menu, Row, Col, Affix } from "antd";
+import {MenuOutlined, ShoppingCartOutlined,UserOutlined,} from "@ant-design/icons";
 
-import {
-  MenuOutlined,
-  ShoppingCartOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import Login from "./login";
+import Link from "next/link";
+
+
 import Cart from "./cart";
 
 const { Header, Content, Sider } = Layout;
@@ -79,8 +75,10 @@ export default function Common({ children }) {
   return (
     <Layout>
       <Affix>
-        <div>
-        <Header
+
+    
+       <Header
+
           className="header1"
           style={{ padding: 0, background: "#000000" }}
         >
@@ -150,7 +148,7 @@ export default function Common({ children }) {
             </Col>
           </Row>
         </Header>
-        </div>
+
       </Affix>
 
       <Drawer
@@ -225,7 +223,9 @@ export default function Common({ children }) {
         </Drawer>
       </div>
       <div> {children}</div>
+
       {/* <Login isLoginOpen={isLoginOpen}></Login> */}
+
     </Layout>
   );
 }
