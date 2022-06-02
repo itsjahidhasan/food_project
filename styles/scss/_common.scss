@@ -45,7 +45,6 @@
 .search-box-container {
   display: flex;
   justify-content: center;
-  
 }
 .header-search-box-section {
   font-size: 16px;
@@ -57,14 +56,13 @@
 }
 
 @media (max-width: 420px) {
-  .header1 {
+  .header2 {
     display: none;
   }
 }
 
 @media (min-width: 421px) {
-  .header2 {
-     display: none;
+  .header1 {
+    display: none;
   }
 }
-
