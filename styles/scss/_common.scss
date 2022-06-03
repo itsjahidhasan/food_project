@@ -22,14 +22,22 @@
   border-bottom: 1px solid #f0f0f0;
   border-radius: 2px 2px 0 0;
 }
-#icon {
-  color: #f0f0f0;
+
+.icon {
+  font-size: 20px;
+  text-align: center;
 }
-.menuIcon:hover {
+.icon:hover {
   cursor: pointer;
 }
-.cartIcon:hover {
-  cursor: pointer;
+.logo {
+  text-align: center;
+  margin-top: 10px;
+  z-index: 1000000;
+}
+
+.logo-style {
+  width: 45px;
 }
 
 .ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
@@ -54,15 +62,26 @@
   border-radius: 15px;
   width: 40vw;
 }
+.main-header {
+  padding: 0px !important;
+  height: 70px !important;
+}
+.mobile-header {
+  background-color: #000000;
+}
+.web-header {
+  padding: 0;
+  background-color: #141414;
+}
 
 @media (max-width: 420px) {
-  .header2 {
+  .web-header {
     display: none;
   }
 }
 
 @media (min-width: 421px) {
-  .header1 {
+  .mobile-header {
     display: none;
   }
 }
