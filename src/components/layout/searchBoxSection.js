@@ -1,4 +1,4 @@
-import { Input, Space } from "antd";
+import { Input, Space, Row, Col } from "antd";
 import { ControlOutlined } from "@ant-design/icons";
 
 export default function search() {
@@ -17,7 +17,6 @@ export default function search() {
   };
   const searchStyle = {
     fontSize: 16,
-    width: 300,
     color: "#2E2E2E",
     border: "2px solid #DBB154",
     borderRadius: "15px",
@@ -29,12 +28,14 @@ export default function search() {
     <>
       <div style={siftingStyle} className="search-box-section">
         <div>
-          <Search style={searchStyle} />
-
-          <button style={lefticon}>
-            {" "}
-            <ControlOutlined />{" "}
-          </button>
+          <Row>
+            <Col span={6}></Col>
+            <Col span={12}>
+              {" "}
+              <Search style={searchStyle} />
+            </Col>
+            <Col span={6}></Col>
+          </Row>
         </div>
       </div>
     </>

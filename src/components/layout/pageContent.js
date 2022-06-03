@@ -47,7 +47,7 @@ export default function content() {
           loopFillGroupWithBlank={true}
           breakpoints={{
             420: {
-              slidesPerView: 1.7,
+              slidesPerView: 1.5,
               spaceBetween: 20,
             },
             768: {
