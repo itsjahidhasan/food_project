@@ -1,0 +1,15 @@
+.content-style {
+  height: 34vh;
+  background-size: cover;
+  background-position: right center;
+  width: 100%;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+}
+
+@media (min-width: 426px) {
+  .content-style {
+    height: 80vh;
+  }
+}

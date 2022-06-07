@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import { Drawer, Input, Dropdown, Button, Layout, Menu, Row, Col, Affix } from "antd";
-import { MenuOutlined, ShoppingCartOutlined, UserOutlined, } from "@ant-design/icons";
+import { Drawer, Input, Layout, Menu, Row, Col, Affix } from "antd";
+import {
+  MenuOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+  SearchOutlined,
+  EnvironmentOutlined,
+} from "@ant-design/icons";
 
 import Link from "next/link";
-
 
 import Cart from "./cart";
 
@@ -16,25 +21,37 @@ const menu = (
   <Menu
     items={[
       {
-        key: '1',
+        key: "1",
         label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.antgroup.com"
+          >
             1st menu item
           </a>
         ),
       },
       {
-        key: '2',
+        key: "2",
         label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.aliyun.com"
+          >
             2nd menu item
           </a>
         ),
       },
       {
-        key: '3',
+        key: "3",
         label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.luohanacademy.com"
+          >
             3rd menu item
           </a>
         ),
@@ -75,42 +92,45 @@ export default function Common({ children }) {
   return (
     <Layout>
       <Affix>
-        <div>
-          <Header
-
-            className="header1"
-            style={{ padding: 0, background: "#000000" }}
-          >
+        <Header className="main-header">
+          <div className="mobile-header">
             <Row>
               <Col span={8}>
-                <div className="logo"></div>
-                <div>1</div>
+                <div className="logo">
+                  <img src="/logo.png" alt="logo" className="logo-style" />
+                </div>
               </Col>
-              <Col span={10}></Col>
-              <Col span={6}>
+              <Col span={4}></Col>
+              <Col span={12}>
                 <Row>
-                  <Col span={12}>
-                    <div className="cartIcon" style={{ fontSize: 25 }}>
-                      <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
+                  <Col span={6}>
+                    <div className="icon">
+                      <SearchOutlined />
                     </div>
                   </Col>
-                  <Col span={12}>
-                    <div
-                      className="menuIcon"
-                      style={{ fontSize: 25, color: "white" }}
-                      onClick={showDrawer}
-                    >
+                  <Col span={6}>
+                    <div className="icon">
+                      <EnvironmentOutlined />
+                    </div>
+                  </Col>
+                  <Col span={6}>
+                    <div className="icon">
+                      <ShoppingCartOutlined
+                        id="icon"
+                        onClick={cartShowDrawer}
+                      />
+                    </div>
+                  </Col>
+                  <Col span={6}>
+                    <div className="icon" onClick={showDrawer}>
                       <MenuOutlined />
                     </div>
                   </Col>
                 </Row>
               </Col>
             </Row>
-          </Header>
-          <Header
-            className="header2"
-            style={{ padding: 0, background: "#141414" }}
-          >
+          </div>
+          <div className="web-header">
             <Row>
               <Col span={4}>
                 <div className="logo"></div>
@@ -141,14 +161,17 @@ export default function Common({ children }) {
                       className="cartIcon"
                       style={{ fontSize: 25, alignContent: "right" }}
                     >
-                      <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
+                      <ShoppingCartOutlined
+                        id="icon"
+                        onClick={cartShowDrawer}
+                      />
                     </div>
                   </Col>
                 </Row>
               </Col>
             </Row>
-          </Header>
-        </div>
+          </div>
+        </Header>
       </Affix>
 
       <Drawer
@@ -225,7 +248,6 @@ export default function Common({ children }) {
       <div> {children}</div>
 
       {/* <Login isLoginOpen={isLoginOpen}></Login> */}
-
     </Layout>
   );
 }
