@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import { Drawer, Input, Layout, Menu, Row, Col, Affix } from "antd";
-import {MenuOutlined, ShoppingCartOutlined,UserOutlined,} from "@ant-design/icons";
+import { Drawer, Input, Dropdown, Button, Layout, Menu, Row, Col, Affix } from "antd";
+import { MenuOutlined, ShoppingCartOutlined, UserOutlined, } from "@ant-design/icons";
 
 import Link from "next/link";
 
@@ -75,80 +75,80 @@ export default function Common({ children }) {
   return (
     <Layout>
       <Affix>
+        <div>
+          <Header
 
-    
-       <Header
-
-          className="header1"
-          style={{ padding: 0, background: "#000000" }}
-        >
-          <Row>
-            <Col span={8}>
-              <div className="logo"></div>
-              <div>1</div>
-            </Col>
-            <Col span={10}></Col>
-            <Col span={6}>
-              <Row>
-                <Col span={12}>
-                  <div className="cartIcon" style={{ fontSize: 25 }}>
-                    <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
-                  </div>
-                </Col>
-                <Col span={12}>
-                  <div
-                    className="menuIcon"
-                    style={{ fontSize: 25, color: "white" }}
-                    onClick={showDrawer}
-                  >
-                    <MenuOutlined />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Header>
-        <Header
-          className="header2"
-          style={{ padding: 0, background: "#141414"}}
-        >
-          <Row>
-            <Col span={4}>
-              <div className="logo"></div>
-              <div>2</div>
-            </Col>
-            <Col span={16}>
-              <Row>
-                <Col span={18}>
-                  <div>
-                    <div className="search-box-container">
-                      <Search className="header-search-box-section" />
+            className="header1"
+            style={{ padding: 0, background: "#000000" }}
+          >
+            <Row>
+              <Col span={8}>
+                <div className="logo"></div>
+                <div>1</div>
+              </Col>
+              <Col span={10}></Col>
+              <Col span={6}>
+                <Row>
+                  <Col span={12}>
+                    <div className="cartIcon" style={{ fontSize: 25 }}>
+                      <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
                     </div>
-                  </div>
-                </Col>
-                <Col spna={6}>HelpLine</Col>
-              </Row>
-            </Col>
-            <Col span={4}>
-              <Row>
-                <Col span={12}>
-                  <div className="cartIcon" style={{ fontSize: 25 }}>
-                    <UserOutlined id="icon" />
-                  </div>
-                </Col>
-                <Col span={12}>
-                  <div
-                    className="cartIcon"
-                    style={{ fontSize: 25, alignContent: "right" }}
-                  >
-                    <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Header>
-
+                  </Col>
+                  <Col span={12}>
+                    <div
+                      className="menuIcon"
+                      style={{ fontSize: 25, color: "white" }}
+                      onClick={showDrawer}
+                    >
+                      <MenuOutlined />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Header>
+          <Header
+            className="header2"
+            style={{ padding: 0, background: "#141414" }}
+          >
+            <Row>
+              <Col span={4}>
+                <div className="logo"></div>
+                <div>2</div>
+              </Col>
+              <Col span={16}>
+                <Row>
+                  <Col span={18}>
+                    <div>
+                      <div className="search-box-container">
+                        <Search className="header-search-box-section" />
+                      </div>
+                    </div>
+                  </Col>
+                  <Col spna={6}>HelpLine</Col>
+                </Row>
+              </Col>
+              <Col span={4}>
+                <Row>
+                  <Col span={12}>
+                    <div className="cartIcon" style={{ fontSize: 25 }}>
+                      <UserOutlined id="icon" onClick={() => Router.push("./webProfile")}
+                      />
+                    </div>
+                  </Col>
+                  <Col span={12}>
+                    <div
+                      className="cartIcon"
+                      style={{ fontSize: 25, alignContent: "right" }}
+                    >
+                      <ShoppingCartOutlined id="icon" onClick={cartShowDrawer} />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Header>
+        </div>
       </Affix>
 
       <Drawer
