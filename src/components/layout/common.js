@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import { Drawer, Input, Layout, Menu, Row, Col, Affix } from "antd";
+import {
+  Drawer,
+  Input,
+  Layout,
+  Menu,
+  Row,
+  Col,
+  Affix,
+  Modal,
+  Button,
+} from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,
   UserOutlined,
   SearchOutlined,
   EnvironmentOutlined,
+  CloseOutlined,
 } from "@ant-design/icons";
 
 import Link from "next/link";
@@ -64,6 +75,8 @@ export default function Common({ children }) {
   const [visible, setVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [modalLoading, setModalLoading] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const showDrawer = () => {
     setVisible(true);
@@ -89,6 +102,22 @@ export default function Common({ children }) {
     setVisible(false);
   };
 
+  const showModal = () => {
+    setModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setModalLoading(true);
+    setTimeout(() => {
+      setModalLoading(false);
+      setModalVisible(false);
+    }, 3000);
+  };
+
+  const handleCancel = () => {
+    setModalVisible(false);
+  };
+
   return (
     <Layout>
       <Affix>
@@ -109,7 +138,7 @@ export default function Common({ children }) {
                     </div>
                   </Col>
                   <Col span={6}>
-                    <div className="icon">
+                    <div className="icon" onClick={showModal}>
                       <EnvironmentOutlined />
                     </div>
                   </Col>
@@ -243,6 +272,39 @@ export default function Common({ children }) {
         >
           <Cart />
         </Drawer>
+      </div>
+      <div className="location">
+        <Modal
+          visible={modalVisible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={null}
+          closable={false}
+          style={{ textAlign: "center" }}
+        >
+          <Row>
+            <div className="location">
+              <h4>
+                Select Your
+                <strong>Delivery Location</strong>
+              </h4>
+              <CloseOutlined
+                key="back"
+                onClick={handleCancel}
+                className="close-btn"
+              />
+            </div>
+          </Row>
+          <Button
+            key="submit"
+            type="primary"
+            loading={modalLoading}
+            onClick={handleOk}
+            className="location-confirm-btn"
+          >
+            Confirm
+          </Button>
+        </Modal>
       </div>
       <div> {children}</div>
 

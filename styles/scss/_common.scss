@@ -73,6 +73,28 @@
   padding: 0;
   background-color: #141414;
 }
+.location-confirm-btn {
+  background-color: #faad14;
+}
+.location {
+  width: 100%;
+}
+.location .close-btn {
+  position: absolute;
+  right: 5px;
+  background: #ef5d66;
+  width: 20px;
+  height: 20px;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 5px;
+  cursor: pointer;
+  z-index: 55555;
+}
 
 @media (max-width: 420px) {
   .web-header {
