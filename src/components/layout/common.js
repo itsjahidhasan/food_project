@@ -181,7 +181,8 @@ export default function Common({ children }) {
                 <Row>
                   <Col span={12}>
                     <div className="cartIcon" style={{ fontSize: 25 }}>
-                      <UserOutlined id="icon" />
+                      <UserOutlined id="icon" onClick={() => Router.push("./webProfile")}
+                      />
                     </div>
                   </Col>
                   <Col span={12}>

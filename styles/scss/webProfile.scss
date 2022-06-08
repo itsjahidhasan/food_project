@@ -1,0 +1,54 @@
+.profile{
+    position: absolute;
+    background-color: $backGround-color-secondary;
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+  
+}
+.profile p{
+    font-size: 16px;
+}
+
+     
+.userdetails{
+    background-color: #141414 !important;
+    color: white;
+    padding-top:3rem;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+}
+.list{
+    background-color: #141414 !important;
+    padding-top:3rem;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+}
+#edit{
+    padding: .2rem .5rem;
+    margin-top: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    color: black;
+    background-color: $text-primary;
+    border: none;
+    border-radius: 6px;
+}
+img, svg {
+    
+    margin-right: 0.3rem;
+}
+.infohead{
+    display: flex;
+    justify-content: space-around;
+}
+.personal{
+    padding-left: 2.5rem;
+}
+.information{
+    display: flex;
+ margin-left: 1rem;
+}
+#info{
+margin-left: 2.5rem;
+}
