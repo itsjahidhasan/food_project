@@ -29,12 +29,12 @@ export default function search() {
       <div style={siftingStyle} className="search-box-section">
         <div>
           <Row>
-            <Col span={6}></Col>
-            <Col span={12}>
+            <Col span={4}></Col>
+            <Col span={16}>
               {" "}
               <Search style={searchStyle} />
             </Col>
-            <Col span={6}></Col>
+            <Col span={4}></Col>
           </Row>
         </div>
       </div>

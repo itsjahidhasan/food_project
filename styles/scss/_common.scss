@@ -26,6 +26,7 @@
 .icon {
   font-size: 20px;
   text-align: center;
+  color: #f9f9fa;
 }
 .icon:hover {
   cursor: pointer;
@@ -73,11 +74,42 @@
   padding: 0;
   background-color: #141414;
 }
+.ant-btn-loading {
+  background-color: #faad14 !important;
+  width: 110px;
+  border-radius: 10px;
+  border: 0px;
+}
 .location-confirm-btn {
   background-color: #faad14;
+  width: 110px;
+  border-radius: 10px;
+  border: 0px;
 }
 .location {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location .map-header {
+  position: absolute;
+  color: #707070;
+  top: 5px;
+  z-index: 55555;
+}
+.location .input-select-location {
+  color: #707070;
+  width: 130px;
+  padding: 6px;
+}
+.map-view {
+  width: 95%;
+  height: 270px;
+  padding-bottom: 15px;
+}
+.map {
+  width: 90%;
 }
 .location .close-btn {
   position: absolute;
@@ -102,11 +134,8 @@
   }
 }
 
-
-
 @media (min-width: 421px) {
   .mobile-header {
     display: none;
   }
 }
-

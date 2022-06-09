@@ -10,6 +10,8 @@ import {
   Affix,
   Modal,
   Button,
+  Cascader,
+  Select,
 } from "antd";
 import {
   MenuOutlined,
@@ -27,6 +29,7 @@ import Cart from "./cart";
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
+const { Option } = Select;
 
 const menu = (
   <Menu
@@ -70,13 +73,31 @@ const menu = (
     ]}
   />
 );
+const options = [
+  {
+    value: "Dhaka",
+    label: "Dhaka",
+    children: [
+      {
+        value: "Ashulia",
+        label: "Ashulia",
+        children: [
+          {
+            value: "Zirabo",
+            label: "Zirabo",
+          },
+        ],
+      },
+    ],
+  },
+];
 
 export default function Common({ children }) {
   const [visible, setVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [modalLoading, setModalLoading] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
 
   const showDrawer = () => {
     setVisible(true);
@@ -111,7 +132,7 @@ export default function Common({ children }) {
     setTimeout(() => {
       setModalLoading(false);
       setModalVisible(false);
-    }, 3000);
+    }, 1000);
   };
 
   const handleCancel = () => {
@@ -144,10 +165,7 @@ export default function Common({ children }) {
                   </Col>
                   <Col span={6}>
                     <div className="icon">
-                      <ShoppingCartOutlined
-                        id="icon"
-                        onClick={cartShowDrawer}
-                      />
+                      <ShoppingCartOutlined onClick={cartShowDrawer} />
                     </div>
                   </Col>
                   <Col span={6}>
@@ -181,7 +199,9 @@ export default function Common({ children }) {
                 <Row>
                   <Col span={12}>
                     <div className="cartIcon" style={{ fontSize: 25 }}>
-                      <UserOutlined id="icon" onClick={() => Router.push("./webProfile")}
+                      <UserOutlined
+                        id="icon"
+                        onClick={() => Router.push("./webProfile")}
                       />
                     </div>
                   </Col>
@@ -277,23 +297,32 @@ export default function Common({ children }) {
       <div className="location">
         <Modal
           visible={modalVisible}
-          onOk={handleOk}
-          onCancel={handleCancel}
           footer={null}
           closable={false}
           style={{ textAlign: "center" }}
         >
           <Row>
             <div className="location">
-              <h4>
-                Select Your
-                <strong>Delivery Location</strong>
-              </h4>
-              <CloseOutlined
+              <span className="map-header">Select Your Delivery Location</span>
+              {/* <CloseOutlined
                 key="back"
                 onClick={handleCancel}
                 className="close-btn"
+              /> */}
+            </div>
+          </Row>
+          <Row>
+            <div className="location">
+              <Cascader
+                options={options}
+                placeholder="Select Address"
+                className="input-select-location"
               />
+            </div>
+          </Row>
+          <Row>
+            <div className="map-view">
+              <img src="/map.webp" alt="image1" className="map" />
             </div>
           </Row>
           <Button
