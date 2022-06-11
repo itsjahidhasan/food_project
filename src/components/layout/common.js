@@ -97,7 +97,8 @@ export default function Common({ children }) {
   const [cartVisible, setCartVisible] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [modalLoading, setModalLoading] = useState(false);
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [searchModalVisible, setSearchModalVisible] = useState(false);
 
   const showDrawer = () => {
     setVisible(true);
@@ -126,6 +127,9 @@ export default function Common({ children }) {
   const showModal = () => {
     setModalVisible(true);
   };
+  const searchModalShow = () => {
+    setSearchModalVisible(true);
+  };
 
   const handleOk = () => {
     setModalLoading(true);
@@ -153,22 +157,23 @@ export default function Common({ children }) {
               <Col span={4}></Col>
               <Col span={12}>
                 <Row>
-                  <Col span={6}>
-                    <div className="icon">
+                  <Col span={4}></Col>
+                  <Col span={4}>
+                    <div className="icon" onClick={searchModalShow}>
                       <SearchOutlined />
                     </div>
                   </Col>
-                  <Col span={6}>
+                  <Col span={4}>
                     <div className="icon" onClick={showModal}>
                       <EnvironmentOutlined />
                     </div>
                   </Col>
-                  <Col span={6}>
+                  <Col span={4}>
                     <div className="icon">
                       <ShoppingCartOutlined onClick={cartShowDrawer} />
                     </div>
                   </Col>
-                  <Col span={6}>
+                  <Col span={4}>
                     <div className="icon" onClick={showDrawer}>
                       <MenuOutlined />
                     </div>
@@ -180,40 +185,51 @@ export default function Common({ children }) {
           <div className="web-header">
             <Row>
               <Col span={4}>
-                <div className="logo"></div>
-                <div>2</div>
+                <div className="logo">
+                  <img src="/logo.png" alt="logo" className="logo-style" />
+                </div>
               </Col>
-              <Col span={16}>
+              <Col span={14}>
                 <Row>
-                  <Col span={18}>
+                  <Col span={24}>
                     <div>
                       <div className="search-box-container">
-                        <Search className="header-search-box-section" />
+                        {/* <Search className="header-search-box-section" /> */}
+                        <Input
+                          placeholder="Search here"
+                          prefix={
+                            <SearchOutlined className="header-search-icon" />
+                          }
+                          className="header-search"
+                        />
                       </div>
                     </div>
                   </Col>
-                  <Col spna={6}>HelpLine</Col>
                 </Row>
               </Col>
-              <Col span={4}>
+              <Col span={6}>
                 <Row>
-                  <Col span={12}>
-                    <div className="cartIcon" style={{ fontSize: 25 }}>
+                  <Col span={4}>
+                    <div style={{ color: "white", float: "right" }}>
+                      <span> HelpLine</span>
+                    </div>
+                  </Col>
+                  <Col span={2}></Col>
+                  <Col span={4}>
+                    <div className="icon" onClick={showModal}>
+                      <EnvironmentOutlined />
+                    </div>
+                  </Col>
+                  <Col span={4}>
+                    <div className="icon">
                       <UserOutlined
-                        id="icon"
                         onClick={() => Router.push("./webProfile")}
                       />
                     </div>
                   </Col>
-                  <Col span={12}>
-                    <div
-                      className="cartIcon"
-                      style={{ fontSize: 25, alignContent: "right" }}
-                    >
-                      <ShoppingCartOutlined
-                        id="icon"
-                        onClick={cartShowDrawer}
-                      />
+                  <Col span={4}>
+                    <div className="icon">
+                      <ShoppingCartOutlined onClick={cartShowDrawer} />
                     </div>
                   </Col>
                 </Row>
@@ -304,11 +320,11 @@ export default function Common({ children }) {
           <Row>
             <div className="location">
               <span className="map-header">Select Your Delivery Location</span>
-              {/* <CloseOutlined
+              <CloseOutlined
                 key="back"
                 onClick={handleCancel}
                 className="close-btn"
-              /> */}
+              />
             </div>
           </Row>
           <Row>
@@ -334,6 +350,26 @@ export default function Common({ children }) {
           >
             Confirm
           </Button>
+        </Modal>
+      </div>
+      <div className="search-model">
+        <Modal
+          title="Search Food"
+          style={{ top: 0 }}
+          visible={searchModalVisible}
+          footer={null}
+          className="search-model-show"
+          // onOk={() => setSearchModalVisible(false)}
+          onCancel={() => setSearchModalVisible(false)}
+        >
+          <div className="search-box-container">
+            {/* <Search className="header-search-box-section" /> */}
+            <Input
+              placeholder="Search here"
+              prefix={<SearchOutlined className="header-search-icon" />}
+              className="model-searchBar"
+            />
+          </div>
         </Modal>
       </div>
       <div> {children}</div>
