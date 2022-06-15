@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Row, Col, Divider, InputNumber, Radio, Input, Space } from "antd";
 import {
@@ -6,7 +6,8 @@ import {
   PlusSquareOutlined,
   MinusSquareOutlined,
 } from "@ant-design/icons";
-export default function cart() {
+export default function Cart() {
+  const [visibleAddPromo, setVisibleAddPromo] = useState(true);
   return (
     <>
       <div className="cart-content">
@@ -146,7 +147,12 @@ export default function cart() {
               <Row>
                 <Col span="12">
                   <p>Discount</p>
-                  <button className="add-promo-btn">Add Promo</button>
+                  <button
+                    className="add-promo-btn"
+                    onClick={() =>setVisibleAddPromo(false)}
+                  >
+                    Add Promo
+                  </button>
                 </Col>
               </Row>
             </div>
