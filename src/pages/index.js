@@ -13,7 +13,7 @@ export default function Home(props) {
     <body>
       <div>
         <Common />
-        <Content style={{ backgroundColor: "#272727" }} layout="fill">
+        <Content style={{ backgroundColor: "#272727"}} layout="fill">
           <HomePageSlider />
           <Search />
           <PageContent />
