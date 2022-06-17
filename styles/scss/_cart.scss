@@ -49,8 +49,7 @@
   z-index: 1;
 }
 .add-promo-btn {
-  background-color: $text-primary;
-  color: $backGround-color-secondary;
+  background-color: $text-primary !important;
   font-size: 12px;
   font-weight: 700;
   width: 90%;
@@ -59,6 +58,10 @@
   border-radius: 8px;
   justify-items: center;
 }
+.add-promo-btn span {
+  color: $backGround-color-secondary !important;
+}
+
 .btn-hide {
   display: none;
 }

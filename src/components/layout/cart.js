@@ -1,13 +1,26 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Row, Col, Divider, InputNumber, Radio, Input, Space } from "antd";
+import {
+  Row,
+  Col,
+  Divider,
+  InputNumber,
+  Radio,
+  Input,
+  Space,
+  Button,
+} from "antd";
 import {
   EditOutlined,
   PlusSquareOutlined,
   MinusSquareOutlined,
 } from "@ant-design/icons";
 export default function Cart() {
-  const [visibleAddPromo, setVisibleAddPromo] = useState(true);
+  const [visibleAddPromo, setVisibleAddPromo] = useState(false);
+  const showClick = () => {
+    setVisibleAddPromo(true);
+    console.log(visibleAddPromo);
+  };
   return (
     <>
       <div className="cart-content">
@@ -35,7 +48,7 @@ export default function Cart() {
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
-                  <Image height="100%" width="100%" src={"/food3.svg"} />
+                  <Image height="100%" width="100%" src={"/food3.png"} />
                 </Col>
                 <Col span="12">
                   <h6>Mutton Kacchi Full</h6>
@@ -79,7 +92,7 @@ export default function Cart() {
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
-                  <Image height="100%" width="100%" src={"/food3.svg"} />
+                  <Image height="100%" width="100%" src={"/food3.png"} />
                 </Col>
                 <Col span="12">
                   <h6>Beef Teheri</h6>
@@ -147,12 +160,15 @@ export default function Cart() {
               <Row>
                 <Col span="12">
                   <p>Discount</p>
-                  <button
+                  <Button
+                    style={{ display: visibleAddPromo ? "none" : "" }}
+                    htmlType="button"
+                    visible={visibleAddPromo}
                     className="add-promo-btn"
-                    onClick={() =>setVisibleAddPromo(false)}
+                    onClick={showClick}
                   >
                     Add Promo
-                  </button>
+                  </Button>
                 </Col>
               </Row>
             </div>
