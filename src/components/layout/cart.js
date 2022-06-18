@@ -17,9 +17,15 @@ import {
 } from "@ant-design/icons";
 export default function Cart() {
   const [visibleAddPromo, setVisibleAddPromo] = useState(false);
+  const [visibleAdd, setVisibleAdd] = useState(false);
+  const [visibleRemove, setVisibleRemove] = useState(false);
   const showClick = () => {
     setVisibleAddPromo(true);
-    console.log(visibleAddPromo);
+    setVisibleAdd(true);
+  };
+  const showRemove = () => {
+    setVisibleAdd(false);
+    setVisibleRemove(true);
   };
   return (
     <>
@@ -172,12 +178,46 @@ export default function Cart() {
                 </Col>
               </Row>
             </div>
+            <div
+              className="selected-food"
+              style={{ display: visibleAdd ? "" : "none" }}
+              visible={visibleAdd}
+            >
+              <Row>
+                <Col span="12">
+                  <Input htmlType="text"></Input>
+                </Col>
+              </Row>
+            </div>
+            <div
+              className="selected-food"
+              style={{ display: visibleRemove ? "" : "none" }}
+              visible={visibleRemove}
+            >
+              <Row>
+                <Col span="12">
+                  <Button htmlType="button">remove</Button>
+                </Col>
+              </Row>
+            </div>
           </Col>
           <Col className="gutter-row" span={10}>
             <div>
               <Row>
                 <Col span="20" className="amount">
                   <span>0 taka</span>
+                </Col>
+              </Row>
+            </div>
+            <div
+              style={{ display: visibleAdd ? "" : "none" }}
+              visible={visibleAdd}
+            >
+              <Row>
+                <Col span="20" className="amount">
+                  <Button htmlType="button" onClick={showRemove}>
+                    Add
+                  </Button>
                 </Col>
               </Row>
             </div>
