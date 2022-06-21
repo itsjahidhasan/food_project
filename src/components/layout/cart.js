@@ -27,6 +27,10 @@ export default function Cart() {
     setVisibleAdd(false);
     setVisibleRemove(true);
   };
+  const showAddPromo = () => {
+    setVisibleRemove(false);
+    setVisibleAddPromo(false);
+  };
   return (
     <>
       <div className="cart-content">
@@ -184,8 +188,8 @@ export default function Cart() {
               visible={visibleAdd}
             >
               <Row>
-                <Col span="12">
-                  <Input htmlType="text"></Input>
+                <Col span="24">
+                  <Input htmlType="text" className="promo-input"></Input>
                 </Col>
               </Row>
             </div>
@@ -196,7 +200,13 @@ export default function Cart() {
             >
               <Row>
                 <Col span="12">
-                  <Button htmlType="button">remove</Button>
+                  <Button
+                    htmlType="button"
+                    className="remove-promo"
+                    onClick={showAddPromo}
+                  >
+                    Remove
+                  </Button>
                 </Col>
               </Row>
             </div>
@@ -214,10 +224,26 @@ export default function Cart() {
               visible={visibleAdd}
             >
               <Row>
-                <Col span="20" className="amount">
-                  <Button htmlType="button" onClick={showRemove}>
+                <Col span="20" className="add-promo">
+                  <Button
+                    htmlType="button"
+                    className="add-btn"
+                    onClick={showRemove}
+                  >
                     Add
                   </Button>
+                </Col>
+              </Row>
+            </div>
+            <div>
+              <Row>
+                <Col
+                  span="20"
+                  className="added-promo-info"
+                  style={{ display: visibleRemove ? "" : "none" }}
+                  visible={visibleRemove}
+                >
+                  <span>Promo added</span>
                 </Col>
               </Row>
             </div>
