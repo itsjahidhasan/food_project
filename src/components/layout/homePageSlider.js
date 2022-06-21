@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Carousel } from "antd";
 
 export default function HomePageSlider() {
-  
   return (
     <>
       <Carousel autoplay>
