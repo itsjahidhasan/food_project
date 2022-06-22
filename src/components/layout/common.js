@@ -24,7 +24,7 @@ import {
 
 import Link from "next/link";
 
-import Cart from "./cart";
+import Cart from "./Cart";
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;

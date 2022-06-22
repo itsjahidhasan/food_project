@@ -1,12 +1,36 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Row, Col, Divider, InputNumber, Radio, Input, Space } from "antd";
+import {
+  Row,
+  Col,
+  Divider,
+  InputNumber,
+  Radio,
+  Input,
+  Space,
+  Button,
+} from "antd";
 import {
   EditOutlined,
   PlusSquareOutlined,
   MinusSquareOutlined,
 } from "@ant-design/icons";
-export default function cart() {
+export default function Cart() {
+  const [visibleAddPromo, setVisibleAddPromo] = useState(false);
+  const [visibleAdd, setVisibleAdd] = useState(false);
+  const [visibleRemove, setVisibleRemove] = useState(false);
+  const showClick = () => {
+    setVisibleAddPromo(true);
+    setVisibleAdd(true);
+  };
+  const showRemove = () => {
+    setVisibleAdd(false);
+    setVisibleRemove(true);
+  };
+  const showAddPromo = () => {
+    setVisibleRemove(false);
+    setVisibleAddPromo(false);
+  };
   return (
     <>
       <div className="cart-content">
@@ -34,7 +58,7 @@ export default function cart() {
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
-                  <Image height="100%" width="100%" src={"/food3.svg"} />
+                  <Image height="100%" width="100%" src={"/food3.png"} />
                 </Col>
                 <Col span="12">
                   <h6>Mutton Kacchi Full</h6>
@@ -78,7 +102,7 @@ export default function cart() {
             <div className="selected-food">
               <Row>
                 <Col span="4" style={{ marginRight: 10 }}>
-                  <Image height="100%" width="100%" src={"/food3.svg"} />
+                  <Image height="100%" width="100%" src={"/food3.png"} />
                 </Col>
                 <Col span="12">
                   <h6>Beef Teheri</h6>
@@ -146,7 +170,43 @@ export default function cart() {
               <Row>
                 <Col span="12">
                   <p>Discount</p>
-                  <button className="add-promo-btn">Add Promo</button>
+                  <Button
+                    style={{ display: visibleAddPromo ? "none" : "" }}
+                    htmlType="button"
+                    visible={visibleAddPromo}
+                    className="add-promo-btn"
+                    onClick={showClick}
+                  >
+                    Add Promo
+                  </Button>
+                </Col>
+              </Row>
+            </div>
+            <div
+              className="selected-food"
+              style={{ display: visibleAdd ? "" : "none" }}
+              visible={visibleAdd}
+            >
+              <Row>
+                <Col span="24">
+                  <Input htmlType="text" className="promo-input"></Input>
+                </Col>
+              </Row>
+            </div>
+            <div
+              className="selected-food"
+              style={{ display: visibleRemove ? "" : "none" }}
+              visible={visibleRemove}
+            >
+              <Row>
+                <Col span="12">
+                  <Button
+                    htmlType="button"
+                    className="remove-promo"
+                    onClick={showAddPromo}
+                  >
+                    Remove
+                  </Button>
                 </Col>
               </Row>
             </div>
@@ -156,6 +216,34 @@ export default function cart() {
               <Row>
                 <Col span="20" className="amount">
                   <span>0 taka</span>
+                </Col>
+              </Row>
+            </div>
+            <div
+              style={{ display: visibleAdd ? "" : "none" }}
+              visible={visibleAdd}
+            >
+              <Row>
+                <Col span="20" className="add-promo">
+                  <Button
+                    htmlType="button"
+                    className="add-btn"
+                    onClick={showRemove}
+                  >
+                    Add
+                  </Button>
+                </Col>
+              </Row>
+            </div>
+            <div>
+              <Row>
+                <Col
+                  span="20"
+                  className="added-promo-info"
+                  style={{ display: visibleRemove ? "" : "none" }}
+                  visible={visibleRemove}
+                >
+                  <span>Promo added</span>
                 </Col>
               </Row>
             </div>

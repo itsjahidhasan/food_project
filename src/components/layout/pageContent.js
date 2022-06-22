@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Row, Col, Divider, Drawer } from "antd";
 import { DownOutlined, CaretDownOutlined } from "@ant-design/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Footer from "../footer";
 
 // Import Swiper styles
 import "swiper/css";
@@ -788,28 +789,7 @@ export default function content() {
           </Row>
         </div>
       </div>
-      <footer>
-        <Row>
-          <Col span={2}>
-            <span>About us</span>
-          </Col>
-          <Col span={3}>
-            <span>Privacy Policy</span>
-          </Col>
-          <Col span={4}>
-            <span>Terms &#38; condition</span>
-          </Col>
-          <Col span={3}>
-            <span>Help Center</span>
-          </Col>
-          <Col span={6}>
-            <span></span>
-          </Col>
-          <Col span={6}>
-            <span style={{ float: "right" }}>Copyrights2022@owldhaka.com</span>
-          </Col>
-        </Row>
-      </footer>
+      <Footer />
     </>
   );
 }
