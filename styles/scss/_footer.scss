@@ -2,6 +2,12 @@
 .footer {
   background-color: black;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .company-logo {
   width: 100%;
   display: flex;
@@ -11,7 +17,7 @@
 }
 .company-slogan {
   font-size: 11px;
-  padding: 0px 32px;
+  padding: 0px 20px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -25,6 +31,7 @@
   list-style: none;
   color: $color-primary;
   font-size: 11px;
+  padding-left: 40px;
 }
 .important-links ul li {
   margin-bottom: 5px;
@@ -36,4 +43,33 @@
   font-size: 12px;
   font-weight: bold;
   margin: 10px 0px;
+}
+.payments-logo {
+  width: 100%;
+  // text-align: center;
+}
+.payments-logo ul {
+  list-style: none;
+  text-align: center;
+}
+.payments-logo ul li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+.payment-method {
+  width: 6vw;
+}
+
+@media (min-width: 769px) {
+  .important-links ul li {
+    display: inline-block;
+    padding: 0px 8px;
+  }
+  .payments-type-header {
+    font-size: 15px;
+  }
+  .company-slogan {
+    padding: 0px 25vw;
+    font-size: 20px;
+  }
 }

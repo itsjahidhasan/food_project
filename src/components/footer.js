@@ -21,7 +21,7 @@ export default function Footer() {
       </Row>
       <Row>
         <Col span={12}>
-          <div className="important-links">
+          <div className="important-links left">
             <ul>
               <li>
                 <Link href={""}>
@@ -41,8 +41,8 @@ export default function Footer() {
             </ul>
           </div>
         </Col>
-        <Col span={12}>
-          <div className="important-links">
+        <Col span={11}>
+          <div className="important-links right">
             <ul>
               <li>
                 <Link href={""}>
@@ -62,6 +62,7 @@ export default function Footer() {
             </ul>
           </div>
         </Col>
+        <Col span={1}></Col>
       </Row>
       <Row>
         <div className="payments-type-header">
@@ -69,7 +70,33 @@ export default function Footer() {
         </div>
       </Row>
       <Row>
-        <div className="payments-logo"></div>
+        <div className="payments-logo">
+          <ul>
+            <li>
+              <img src="/visa.jpg" alt="visa" className="payment-method" />
+            </li>
+            <li>
+              <img
+                src="/master.png"
+                alt="master-card"
+                className="payment-method"
+              />
+            </li>
+            <li>
+              <img
+                src="/american-express.png"
+                alt="american-express"
+                className="payment-method"
+              />
+            </li>
+            <li>
+              <img src="/bkash.png" alt="bkash" className="payment-method" />
+            </li>
+            <li>
+              <img src="/Nagad.png" alt="nogod" className="payment-method" />
+            </li>
+          </ul>
+        </div>
       </Row>
     </div>
   );
