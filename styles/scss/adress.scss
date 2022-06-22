@@ -5,23 +5,32 @@
     background-color: #141414;
 
 }
+.anticon{
+  color:  #ffaa00 !important ;
+}
 .user{
     display: flex;
   justify-content: space-around;
 }
+#place{
+  color: $text-primary;
+  margin-left: 2rem;
+}
 #add{
     color: white;
+    font-weight: 900;
 }
 .addbtn{
    
-   text-align: center;
+   margin-left: 2rem;
    
 }
+
 .address{
     padding: .3rem 1rem;
     margin-top: 1.5rem;
     font-weight: bolder;
-  justify-content: center;
+font-size: 14px;
     color: black;
     background-color: #ffaa00;
     border: none;

@@ -8,10 +8,10 @@ export default function Terms(){
            <div className='headers'>
             <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
-        <p id='icon'> Order Histroy</p>
+        <p id='icon'> Terms & Condition</p>
         </div>
            
-          <p>Text will be written here</p>
+          <p style={{margin: '2rem'}}>Text will be written here or redirect to link through browser</p>
            
         </div>
     )

@@ -255,7 +255,7 @@ export default function Common({ children }) {
           theme="light"
           style={{ background: "none", border: "none" }}
         >
-          <Menu.Item key="0" onClick={handleLogin}>
+          <Menu.Item key="0" onClick={() => Router.push("./webLogin")}>
             Login / Sign Up
           </Menu.Item>
           {/* <Menu.Item key="1" onClick={handleOrder} >Orders</Menu.Item> */}
@@ -270,7 +270,7 @@ export default function Common({ children }) {
             Profile
           </Menu.Item>
           <Menu.Item key="3" onClick={() => Router.push("./adress")}>
-            Addresses
+            Address List
           </Menu.Item>
           <Menu.Item key="4" onClick={() => Router.push("./helpCenter")}>
             Help Center
@@ -284,9 +284,9 @@ export default function Common({ children }) {
           <Menu.Item key="7" onClick={logout}>
             Log Out
           </Menu.Item>
-          <Menu.Item key="8" onClick={() => Router.push("./webLogin")}>
+          {/* <Menu.Item key="8" onClick={() => Router.push("./webLogin")}>
             Web Login
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
       </Drawer>
       <div className="cart">

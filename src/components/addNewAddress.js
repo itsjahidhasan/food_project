@@ -18,6 +18,8 @@ export default function AddNewAddress({ isAddOpen = true }) {
     //closing drawer with Icon
     const adding = () => {
         setVisible(false);
+        
+        setText('')
     }
     const getText = event=>{
        setText(event.target.value)

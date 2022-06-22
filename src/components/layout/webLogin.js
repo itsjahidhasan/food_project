@@ -1,7 +1,8 @@
-import { Input, Checkbox } from 'antd';
+import { Input,  Checkbox } from 'antd';
 import Common from './common';
 import React, { useState } from 'react'
-import  Otp  from './otp';
+import Otp from './otp';
+
 
 
 export default function WebLogin() {
@@ -46,5 +47,4 @@ export default function WebLogin() {
         </Common>
     );
 };
-
 

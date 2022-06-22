@@ -28,7 +28,7 @@ export default function Reorder(){
                    </div>
              <div>
                     <div className="detail">
-                    <Image height="80%" width="100%" src={"/Rectangle 506.svg"} />
+                    <Image height="60%" width="80%" src={"/food1.png"} />
                         <div>
                             <p id="bold">Mutton Kacchi Full</p>
                             <p>haji Biriyani</p>
@@ -39,7 +39,7 @@ export default function Reorder(){
             </div>
              <div >
                     <div className="detail">
-                    <Image height="80%" width="100%" src={"/Rectangle 5061.svg"} />
+                    <Image height="60%" width="80%" src={"/food2.png"} />
                         <div>
                             <p id="bold">Mutton Kacchi Full</p>
                             <p>haji Biriyani</p>

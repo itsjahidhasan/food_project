@@ -2,7 +2,7 @@ import { ArrowLeftOutlined, EditOutlined, DeleteOutlined  } from "@ant-design/ic
 import { useEffect, useState } from "react";
 import Router from 'next/router'
 import AddNewAddress from "../addNewAddress";
-import UserAdress from "../useradress";
+
 
 export default function Adressess(){
     const [visible, setVisible] = useState(false);
@@ -18,10 +18,12 @@ export default function Adressess(){
             <div className='headers'>
             <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
             />
-        <p id='icon'> Addressess</p>
+        <p id='icon'> Address</p>
         </div>
+        <p id="place">My Place</p>
        <div>
-       <UserAdress></UserAdress>
+      <UserAddress></UserAddress>
+      <UserAddress></UserAddress>
      
        </div>
       <div className="addbtn">
@@ -32,18 +34,19 @@ export default function Adressess(){
     )
 }
 
-// function UserAdress(){
-//     return(
-//             <div className="user">
-//                 <div className="">
-//                   <p id="add">11 road no. 16</p>
-//                        <p id ='add'>Note flat no 4B</p>
-//                 </div>
-//                     <div>
-//                     <EditOutlined style={{ fontSize: '21px' }}/>
-//                     <DeleteOutlined style={{ fontSize: '21px',marginLeft:'20px'}}/>
-//                     </div>
-                   
-//             </div>
-//     )
-// }
+function UserAddress(){
+    return(
+            <div className="user">
+                <div className="">
+                  <p  id="add">Address <span> <DeleteOutlined style={{ fontSize: '21px',marginLeft:'20px'}}/></span></p>
+                  <p>11 road no. 16</p>
+                       <p id ='add'>Note flat no 4B</p>
+                </div>
+                    <div>
+                    <p  id="add">Address <span> <DeleteOutlined style={{ fontSize: '21px',marginLeft:'20px'}}/></span></p>
+                  <p>11 road no. 16</p>
+                       <p id ='add'>Note flat no 4B</p>
+                    </div>
+            </div>
+    )
+}

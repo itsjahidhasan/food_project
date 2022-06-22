@@ -1,24 +1,89 @@
 import Router from 'next/router'
-import { FormOutlined }from "@ant-design/icons";
 import Common from './common';
-import { Layout } from 'antd';
+import Link from "next/link";
+import { LaptopOutlined,FormOutlined, NotificationOutlined, UserOutlined,EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
+import { Layout ,Input, Space, Menu } from 'antd';
+import React from 'react';
+import  { useState } from 'react'
+
+const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
+  const key = String(index + 1);
+  return {
+    key: `sub${key}`,
+    icon: React.createElement(icon),
+    label: `subnav ${key}`,
+    children: new Array(4).fill(null).map((_, j) => {
+      const subKey = index * 4 + j + 1;
+      return {
+        key: subKey,
+        label: `option${subKey}`,
+      };
+    }),
+  };
+});
+
 
 export default function WebProfile() {
+  const [changeP, setChange] = useState(false)
+const change =()=>{
+setChange(true)
+}
     const { Sider, Content } = Layout;
     return (
         <Common>
-            <Layout className='profile'>
-                <Sider>
-                    <ul>
-                        <p>My profile</p>
-                        <p>Change Password</p>
-                        <p>Purchased Items</p>
-                        <p>My Review</p>
-                        <p>My Favourites</p>
-                    </ul>
-                </Sider>
-                <Content>
-                    <div className='infohead'>
+             
+    <Layout>
+      <Sider width={200} className="site-layout-background">
+        <Menu
+          mode="inline"
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          style={{
+            height: '100%',
+            borderRight: 0,
+            marginTop: '3rem',
+            background: 'black'
+          }}
+          items={items2}
+          
+        >
+         
+          <Menu.Item key="2" >
+            My Profile
+          </Menu.Item>
+            
+            <Menu.Item key="2" onClick={change}>
+            Change Password
+          </Menu.Item>
+            <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
+            Purchased Items
+          </Menu.Item>
+            <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
+            My Review
+          </Menu.Item>
+            <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
+            My Favourites
+          </Menu.Item>
+        </Menu>
+      </Sider>
+      <Layout
+        style={{
+          padding: '0 24px 24px',
+        }}
+      >
+        
+        <Content
+          className="site-layout-background"
+          style={{
+            padding: 24,
+            marginTop: '3rem',
+            minHeight: 500,
+            background: 'black'
+          }}
+        >
+    <section>
+       { !changeP ? (<div>
+       <div className='infohead'>
                         <div>
                             <h3>Fahim Khan</h3>
                             <p>fahmikhan@gmail.com</p>
@@ -71,8 +136,32 @@ export default function WebProfile() {
                                 </div>
                             </div>
                         </div>
-                    </div></Content>
-            </Layout>
+                    </div>
+       </div>) :(
+                    <div>
+                      <ChangePass></ChangePass>
+                    </div>)}
+    </section>
+        </Content>
+      </Layout>
+    </Layout>
+    
         </Common>
     )
+}
+
+
+function ChangePass() {
+  return (
+      <div>
+          <h4>Change Password</h4>
+          <Space direction="vertical">
+              <Input.Password placeholder="input password" />
+              <Input.Password
+                  placeholder="input password"
+                  iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+              />
+          </Space>
+      </div>
+  )
 }
