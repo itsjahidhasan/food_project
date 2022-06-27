@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { EditOutlined } from "@ant-design/icons";
+import Router from "next/router";
 import Link from "next/link";
 
 import { Row, Col } from "antd";
@@ -28,7 +29,7 @@ export default function Footer() {
                   <a>About us</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={() => Router.push("./helpCenter")}>
                 <Link href={""}>
                   <a>Help Center</a>
                 </Link>
@@ -49,7 +50,7 @@ export default function Footer() {
                   <a>Privacy Policy</a>
                 </Link>
               </li>
-              <li>
+              <li onClick={() => Router.push("./terms")}>
                 <Link href={""}>
                   <a>Terms & Conditions</a>
                 </Link>

@@ -81,12 +81,7 @@ const options = [
       {
         value: "Ashulia",
         label: "Ashulia",
-        children: [
-          {
-            value: "Zirabo",
-            label: "Zirabo",
-          },
-        ],
+        
       },
     ],
   },
@@ -151,7 +146,8 @@ export default function Common({ children }) {
             <Row>
               <Col span={8}>
                 <div className="logo">
-                  <img src="/logo.png" alt="logo" className="logo-style" />
+                 <Link href="/" passHref>
+                 <img src="/logo.png" alt="logo" className="logo-style" /></Link>
                 </div>
               </Col>
               <Col span={4}></Col>
@@ -186,7 +182,8 @@ export default function Common({ children }) {
             <Row>
               <Col span={4}>
                 <div className="logo">
-                  <img src="/logo.png" alt="logo" className="logo-style" />
+                 <Link href= "./" passHref>
+                 <img src="/logo.png" alt="logo" className="logo-style" /></Link>
                 </div>
               </Col>
               <Col span={14}>
@@ -210,7 +207,7 @@ export default function Common({ children }) {
               <Col span={6}>
                 <Row>
                   <Col span={4}>
-                    <div style={{ color: "white", float: "right" }}>
+                    <div style={{ color: "white", float: "right" }}  onClick={() => Router.push("./helpCenter")}>
                       <span> HelpLine</span>
                     </div>
                   </Col>
@@ -375,6 +372,7 @@ export default function Common({ children }) {
       <div> {children}</div>
 
       {/* <Login isLoginOpen={isLoginOpen}></Login> */}
+      
     </Layout>
   );
 }

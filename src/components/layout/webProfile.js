@@ -5,6 +5,7 @@ import { LaptopOutlined,FormOutlined, NotificationOutlined, UserOutlined,EyeInvi
 import { Layout ,Input, Space, Menu } from 'antd';
 import React from 'react';
 import  { useState } from 'react'
+import { Footer } from 'antd/lib/layout/layout';
 
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
   const key = String(index + 1);

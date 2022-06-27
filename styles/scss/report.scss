@@ -1,19 +1,19 @@
+
 .report{
     height: 100%;
     width: 100%;
     position: absolute;
     text-align: center;
-    background-color: black;
+    background-color:$backGround-color-primary;
 }
 .reports{
-    padding: .5rem 2rem;
-    margin-top: 1.5rem;
-    font-weight: bolder;
-    color: black;
-    background-color: #ffaa00;
-    border: none;
-    border-radius: 6px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}    
+.send-b{
+    margin-left: 8rem;
+    
 }
 
 #input{
@@ -23,5 +23,18 @@
     border-radius: 10px;
     background-color: black;
     width: 80%;
-    height: 10rem;
+    height: 18rem;
+}
+@media  (min-width: 690px) {
+#input{
+    width: 30%;
+}
+.reports{
+    margin-top: 6rem;
+  
+}
+.send-b{
+ margin-left: 0;
+    
+}
 }

@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Row, Col, Drawer, Button } from "antd";
 import React, { useState } from "react";
+import Common from "./common";
 
 export default function FoodMenu() {
   return (
-    <>
+    <Common>
+      <>
       <div className="food-menu-mobile-view">
         <div className="header">
           <Row span={16}>
@@ -43,6 +45,7 @@ export default function FoodMenu() {
         </Row>
       </div>
     </>
+    </Common>
   );
 }
 

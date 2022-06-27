@@ -10,11 +10,11 @@ export default function Report (){
             />
         <p id='icon'> Report & Feedback</p>
         </div>
-<div>
-<button className="reports">View Previous Reports</button>
+<div className="reports">
+<button id="button">View Previous Reports</button>
 
 <input id='input'type="text" />
-<button className="reports">Send</button>
+<button id="button" className="send-b">Send</button>
 </div>
 </div>
     )

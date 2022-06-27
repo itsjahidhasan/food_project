@@ -1,13 +1,25 @@
 .helpline {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #0A0A0A;
     height: 90px;
     align-items: center;
     margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .help{
     display: inline-block;
     
+}
+
+@media (min-width: 601px ) and (min-width: 1024px) {
+.helpline{
+   
+    margin: 1rem 30%;
+    
+}
+.hcenter{
+    margin-top: 3rem;
+}
 }

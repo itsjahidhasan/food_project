@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { EditOutlined } from "@ant-design/icons";
 
-import { Drawer, Input, Checkbox, Button, Space, Radio } from "antd";
+import { Drawer, Input } from "antd";
 import UserAdress from "./useradress";
 
 export default function AddNewAddress({ isAddOpen = true }) {
@@ -18,6 +18,7 @@ export default function AddNewAddress({ isAddOpen = true }) {
   //closing drawer with Icon
   const adding = () => {
     setVisible(false);
+    setText('')
   };
   const getText = (event) => {
     setText(event.target.value);
@@ -44,11 +45,11 @@ export default function AddNewAddress({ isAddOpen = true }) {
         </div>
         <div className="vertical-center">
           <p>Note</p>
-          <Input onBlur={getText} className="input" />
+          <Input onBlur={getText} className="input" onAbort />
 
-          <button id="button" onClick={adding}>
+           <button id="button" onClick={adding}>
             Save
-          </button>
+          </button> 
         </div>
       </Drawer>
       {<UserAdress text={text}></UserAdress>}
