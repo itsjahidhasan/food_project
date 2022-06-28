@@ -45,6 +45,7 @@ h3 {
 }
 .food-menu-mobile-view {
   height: 100vh;
+  background-color: #141414;
 }
 .food-add-view .food-img-container {
   width: 100%;
@@ -180,5 +181,86 @@ h3 {
   }
   .menu-content:focus {
     border: 1px solid white;
+  }
+}
+@media (min-width: 767px) {
+  .restaurants-name {
+    margin-bottom: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+  }
+  .restaurants-name :hover {
+    background-color: white;
+    color: #141414;
+    border-radius: 1px 24px 21px 0px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 70px 10px 20px;
+  }
+  .food-add-view {
+    background-color: #141414;
+    width: 232px;
+    margin-left: 14px;
+    padding-top: 10px;
+    border-radius: 20px;
+  }
+  .food-menu-web-view .food-add-view .food-img-container .food-img {
+    width: 200px;
+    height: -webkit-fit-content;
+    padding: 0px 0px 0px 0px;
+  }
+  .menu-space {
+    padding: 10px;
+  }
+}
+@media (min-width: 1023px) {
+  .food-add-view {
+    background-color: #141414;
+    width: 265px;
+    margin-right: 22px;
+    padding-top: 10px;
+    border-radius: 20px;
+    float: right;
+  }
+  .restaurants-name {
+    margin-bottom: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+  }
+  .restaurants-name :hover {
+    background-color: white;
+    color: #141414;
+    border-radius: 1px 24px 21px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 70px 10px 20px;
+  }
+}
+@media (min-width: 1439px) {
+  .food-add-view {
+    background-color: #141414;
+    width: 325px;
+    margin-left: 18px;
+    padding-top: 10px;
+    border-radius: 20px;
+  }
+  .restaurants-name {
+    margin-bottom: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+  }
+  .restaurants-name :hover {
+    background-color: white;
+    color: #141414;
+    border-radius: 1px 24px 21px 0px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 70px 10px 20px;
+  }
+  .menu-space {
+    padding: 0px;
   }
 }

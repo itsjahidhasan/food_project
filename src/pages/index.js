@@ -10,7 +10,7 @@ import Login from "../components/layout/login";
 export default function Home(props) {
   const { Header, Content, Footer } = Layout;
   return (
-    <body>
+    <>
       <div>
         <Common />
         <Content style={{ backgroundColor: "#272727"}} layout="fill">
@@ -19,6 +19,6 @@ export default function Home(props) {
           <PageContent />
         </Content>
       </div>
-    </body>
+    </>
   );
 }
