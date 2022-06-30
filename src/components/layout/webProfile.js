@@ -1,11 +1,12 @@
 import Router from 'next/router'
 import Common from './common';
-import Link from "next/link";
+import Footer from "../footer";
 import { LaptopOutlined,FormOutlined, NotificationOutlined, UserOutlined,EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { Layout ,Input, Space, Menu } from 'antd';
 import React from 'react';
 import  { useState } from 'react'
-import { Footer } from 'antd/lib/layout/layout';
+import UserProfile from './userProfile';
+
 
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
   const key = String(index + 1);
@@ -26,11 +27,16 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
 
 export default function WebProfile() {
   const [changeP, setChange] = useState(false)
+  const[another, setanother]=useState(false)
 const change =()=>{
 setChange(true)
 }
+const ano =()=>{
+setanother(true)
+}
     const { Sider, Content } = Layout;
     return (
+      <>
         <Common>
              
     <Layout>
@@ -56,7 +62,7 @@ setChange(true)
             <Menu.Item key="2" onClick={change}>
             Change Password
           </Menu.Item>
-            <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
+            <Menu.Item key="2" onClick={ano}>
             Purchased Items
           </Menu.Item>
             <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>
@@ -141,13 +147,14 @@ setChange(true)
        </div>) :(
                     <div>
                       <ChangePass></ChangePass>
-                    </div>)}
+                    </div>)} 
     </section>
         </Content>
       </Layout>
     </Layout>
-    
         </Common>
+        <Footer></Footer>
+        </>
     )
 }
 

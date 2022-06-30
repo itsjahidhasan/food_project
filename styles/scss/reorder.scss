@@ -1,7 +1,8 @@
 .reorder{
+    display: flexbox;
     position: absolute;
-    // height: 100%;
-     width: 100%;
+    height: 100%;
+    width: 100%;
     background-color: #0A0A0A;
     
 }
@@ -35,7 +36,7 @@ p{
 
 .detail{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 1rem;
 }
 #bold{
@@ -52,4 +53,17 @@ p{
 .divider{
     display: flex;
   justify-content: center;
+}
+
+
+@media  (min-width: 724px) {
+    .reorderbox{
+
+        margin: 3rem 30%;
+        border-radius: 5px;
+       
+
+    }
+
+ 
 }

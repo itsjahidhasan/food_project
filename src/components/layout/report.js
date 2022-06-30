@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
 
 import Router from 'next/router'
+import WebProfile from "./webProfile";
 export default function Report (){
    
     return(
@@ -17,5 +18,6 @@ export default function Report (){
 <button id="button" className="send-b">Send</button>
 </div>
 </div>
+
     )
 }

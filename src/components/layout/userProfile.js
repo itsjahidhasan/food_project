@@ -14,9 +14,11 @@ export default function UserProfile(){
             />
         <p id='icon'> Profile</p>
         </div>
-        <Input style={{ height:65, color:'red'}} className='inputs' size="large" placeholder={'name'} suffix={<EditOutlined />} />
+       <div className="reorderbox">
+       <Input style={{ height:65, color:'red'}} className='inputs' size="large" placeholder={'name'} suffix={<EditOutlined />} />
         <Input style={{ height:65}}  className='inputs' size="large" placeholder="Number" suffix={<EditOutlined />} />
         <Input style={{ height:65}} className='inputs' size="large" placeholder="Email" suffix={<EditOutlined />} />
+       </div>
       </div>
       </Common>
     )
