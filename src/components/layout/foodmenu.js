@@ -29,14 +29,12 @@ export default function FoodMenu() {
 
       <div className="food-menu-web-view">
         <Row utter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-          <Col className="gutter-row" span={6}>
+          <Col className="gutter-row" span={5}>
             <RestaurantsName></RestaurantsName>
           </Col>
-          <Col className="gutter-row" span={1}></Col>
-          <Col className="gutter-row" span={7}>
+          <Col className="gutter-row menu-space" span={11}>
             <MainContent></MainContent>
           </Col>
-          <Col className="gutter-row" span={1}></Col>
           <Col className="gutter-row" span={8}>
             <div>
               <FoodAddView></FoodAddView>
