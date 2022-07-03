@@ -5,7 +5,7 @@ import { LaptopOutlined,FormOutlined, NotificationOutlined, UserOutlined,EyeInvi
 import { Layout ,Input, Space, Menu } from 'antd';
 import React from 'react';
 import  { useState } from 'react'
-import UserProfile from './userProfile';
+
 
 
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
@@ -34,6 +34,7 @@ setChange(true)
 const ano =()=>{
 setanother(true)
 }
+
     const { Sider, Content } = Layout;
     return (
       <>
@@ -50,6 +51,7 @@ setanother(true)
             borderRight: 0,
             marginTop: '3rem',
             background: 'black'
+            
           }}
           items={items2}
           
@@ -62,7 +64,7 @@ setanother(true)
             <Menu.Item key="2" onClick={change}>
             Change Password
           </Menu.Item>
-            <Menu.Item key="2" onClick={ano}>
+            <Menu.Item key="2" onClick={() => Router.push("./purchase")}>
             Purchased Items
           </Menu.Item>
             <Menu.Item key="2" onClick={() => Router.push("./userProfile")}>

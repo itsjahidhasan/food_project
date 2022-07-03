@@ -1,5 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
+
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import Router from 'next/router'
 import { Row, Col, Drawer, Button } from "antd";
 import React, { useState } from "react";
 import Common from "./common";
@@ -9,19 +10,10 @@ export default function FoodMenu() {
     <Common>
       <>
       <div className="food-menu-mobile-view">
-        <div className="header">
-          <Row span={16}>
-            <Col span={8}>
-              <Link href="/" passHref>
-                <a className="back-arrow">&#8592;</a>
-              </Link>
-            </Col>
-            <Col>
-              <span className="">
-                <h3>Haji Biriyani</h3>
-              </span>
-            </Col>
-          </Row>
+      <div className='headers'>
+            <ArrowLeftOutlined className="arrow" onClick={() => Router.back()} style={{ fontSize: '25px'}}
+            />
+        <p id='icon'>Haji Biriyani</p>
         </div>
 
         <MainContent></MainContent>
@@ -77,6 +69,8 @@ function MainContent() {
   const onClose = () => {
     setVisible(false);
   };
+  const closing = () => {
+    setVisible(false)}
   return (
     <>
       <div className="menu-content" onClick={showDrawer}>
@@ -130,16 +124,7 @@ function MainContent() {
           backgroundColor: "#F2F2F24F",
         }}
       >
-        <FoodAddView></FoodAddView>
-      </Drawer>
-    </>
-  );
-}
-
-function FoodAddView() {
-  return (
-    <>
-      <div className="food-add-view">
+        <div className="food-add-view">
         <div className="food-img-container">
           <img src="/food6.png" alt="image1" className="food-img" />
         </div>
@@ -218,7 +203,102 @@ function FoodAddView() {
               </Col>
               <Col span={6}>
                 <Row>
-                  <button className="add-order-btn">Add</button>
+                  <button className="add-order-btn"  onClick={() => Router.push("./cart")}>Add</button>
+                </Row>
+              </Col>
+            </Row>
+          </div>
+        </div>
+      </div>
+      </Drawer>
+    </>
+  );
+}
+
+function FoodAddView() {
+  
+  return (
+    <>
+     <div className="food-add-view">
+        <div className="food-img-container">
+          <img src="/food6.png" alt="image1" className="food-img" />
+        </div>
+        <div className="food-info">
+          <Row>
+            <Col span={12}>
+              <span className="food-name">Mutton Kacci Full</span>
+            </Col>
+            <Col span={12}>
+              <span className="food-price">220 Taka</span>
+            </Col>
+          </Row>
+          <div>
+            <Row className="row-gap">
+              <Col span={12}>
+                <input type="radio" value="Half" name="size" />
+                <span className="food-name">Half</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row className="row-gap">
+              <Col span={12}>
+                <input type="radio" value="Full" name="size" />
+                <span className="food-name">Full</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row className="row-gap">
+              <Col span={12}>
+                <input type="checkbox" value="Extra Meat" name="extraMeat" />
+                <span className="food-name">Extra Meat</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+            <Row className="row-gap">
+              <Col span={12}>
+                <input type="checkbox" value="Add Coke" name="Coke" />
+                <span className="food-name">Add Coke</span>
+              </Col>
+              <Col span={12}>
+                <span className="food-price">220 Taka</span>
+              </Col>
+            </Row>
+
+            <Row className="order-row-gap">
+              <Col span={18}>
+                <Row>
+                  <Col span={4}>
+                    <div>
+                      <button className="order-number-button">-</button>
+                      {/* <MinusSquareOutlined style={{ fontSize: 27 }} /> */}
+                    </div>
+                  </Col>
+                  <Col span={4}>
+                    <div>
+                      <input
+                        className="orderNumberInput"
+                        type={Number}
+                        value={0}
+                      />
+                    </div>
+                  </Col>
+                  <Col span={4}>
+                    <div>
+                      <button className="order-number-button">+</button>
+                      {/* <PlusSquareOutlined style={{ fontSize: 27 }} /> */}
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col span={6}>
+                <Row>
+                  <button className="add-order-btn"  onClick={() => Router.push("./cart")}>Add</button>
                 </Row>
               </Col>
             </Row>

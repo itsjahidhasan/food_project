@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
+import Router from 'next/router'
 import Image from "next/image";
 import {
   Row,
   Col,
-  Divider,
-  InputNumber,
   Radio,
   Input,
   Space,
@@ -35,7 +34,7 @@ export default function Cart() {
     <>
       <div className="cart-content">
         <div className="checkout-btn-container">
-          <button className="checkout-btn">Checkout</button>
+          <button className="checkout-btn" onClick={() => Router.push("./delivery")}>Checkout</button>
         </div>
 
         <Row gutter={16} className="row-padding">

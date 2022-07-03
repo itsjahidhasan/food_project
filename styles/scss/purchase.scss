@@ -1,0 +1,16 @@
+.purchase {
+    position: inherit;
+    background: #141414;
+     width: 100%;
+    height: fit-content;
+}
+
+@media (max-width: 1920px) {
+    .footers {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+}

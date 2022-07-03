@@ -77,7 +77,7 @@ export default function Reorder() {
                     </div>
                 </div>
                 <div className="button">
-                    <button id="button">Reorder</button>
+                    <button id="button"  onClick={() => Router.push("./cart")}>Reorder</button>
                 </div>
             </div>
         </div>

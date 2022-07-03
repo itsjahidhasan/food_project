@@ -1,0 +1,26 @@
+.delivary{
+    background-color:$backGround-color-secondary;
+    margin: 2rem;
+    line-height: 1rem;
+    
+
+}
+.btun{
+    text-align: center;
+}
+.deli-button{
+    
+    padding: 0.7rem 2.5rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: #ffaa00;
+    border: none;
+    border-radius: 8px;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+    color:white;
+}

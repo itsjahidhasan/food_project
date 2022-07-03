@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Row, Col, Divider, Drawer } from "antd";
+import { Row, Col, Divider,  Card,  Drawer } from "antd";
 import { DownOutlined, CaretDownOutlined } from "@ant-design/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Footer from "../footer";
@@ -17,6 +17,27 @@ import { Autoplay, Navigation, Scrollbar } from "swiper";
 export default function content() {
   return (
     <>
+    <div className="cards">
+    <div className="site-card-wrapper">
+    <Row gutter={16}>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>
+          Card content
+        </Card>
+      </Col>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>
+          Card content
+        </Card>
+      </Col>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>
+          Card content
+        </Card>
+      </Col>
+    </Row>
+  </div>
+    </div>
       {/* Favorite content */}
       <Divider orientation="left"></Divider>
 
