@@ -69,8 +69,10 @@
   background-color: #000000;
 }
 .web-header {
+  background: transparent;
+  backdrop-filter: blur(100px);
   padding: 0;
-  background-color: #141414;
+  //background-color: #141414;
 }
 .ant-btn-loading {
   background-color: #faad14 !important;

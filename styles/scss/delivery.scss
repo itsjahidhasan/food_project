@@ -24,3 +24,19 @@
 .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     color:white;
 }
+@media (min-width: 601px) and (min-width: 1024px) {
+    .delivary {
+        
+        margin: 6rem 35%;
+        padding: 2rem;
+        border-radius: 5px;
+        border: 1px solid $color-primary;
+        ;
+        font-size: 30px;
+  
+    }
+    .deli-button{
+        margin-bottom: 2rem;
+    }
+  
+  }

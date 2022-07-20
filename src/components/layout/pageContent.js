@@ -738,8 +738,8 @@ export default function content() {
         </div>
 
         <div className="more-btn">
-          <button>
-            More <CaretDownOutlined style={{ fontSize: "26px" }} />
+          <button >
+            More <CaretDownOutlined id="moreicon" style={{ fontSize: "26px" }} />
           </button>
         </div>
         <div className="restaurants-mobile-view">

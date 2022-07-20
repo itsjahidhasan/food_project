@@ -32,7 +32,7 @@ export default function Cart() {
   };
   return (
     <>
-      <div className="cart-content">
+      <div className="carts-content">
         <div className="checkout-btn-container">
           <button className="checkout-btn" onClick={() => Router.push("./delivery")}>Checkout</button>
         </div>

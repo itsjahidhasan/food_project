@@ -5,8 +5,26 @@
     background-color: #141414;
 
 }
-.anticon{
-  color:  #ffaa00 !important ;
+.anticon svg{
+  color:  #ffaa00 important ;
+}
+.addres{
+  margin: 1rem;
+  
+}
+.home{
+  padding: .5rem;
+  border: 1px solid  #ffaa00;
+  border-radius: .6rem;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.addinput{
+  height:8rem;
+  background: #0A0A0A;
+  border:1px solid #ffaa00;
+  border-radius: .5rem;
+  color: white;
 }
 .user{
     display: flex;

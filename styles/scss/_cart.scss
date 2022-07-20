@@ -148,3 +148,16 @@
   background-color: $backGround-color-primary;
   height: 100px;
 }
+
+@media (min-width: 601px) and (min-width: 1024px) {
+  .cart-content {
+    padding: 1rem;
+      margin: 1rem 35%;
+      border-radius: 5px;
+      border: 1px solid $color-primary;
+      ;
+      font-size: 30px;
+
+  }
+
+}
