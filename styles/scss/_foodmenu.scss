@@ -60,6 +60,7 @@ h3 {
 .food-add-view .food-name {
   font-size: 13px;
   font-weight: bold;
+  margin-left: 1rem;
 }
 .food-add-view .food-price {
   padding-left: 20vw;
@@ -138,8 +139,7 @@ h3 {
 }
 .order-row-gap {
   padding: 7px 0px 25px 0px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+ margin: 2rem 0 0;
 }
 @media (max-width: 426px) {
   .food-menu-web-view {

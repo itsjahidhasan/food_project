@@ -1,78 +1,18 @@
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import {
-  Drawer,
-  Input,
-  Layout,
-  Menu,
-  Row,
-  Col,
-  Affix,
-  Modal,
-  Button,
-  Cascader,
-  Select,
-} from "antd";
-import {
-  MenuOutlined,
-  ShoppingCartOutlined,
-  UserOutlined,
-  SearchOutlined,
-  EnvironmentOutlined,
-  CloseOutlined,
-} from "@ant-design/icons";
+import { Avatar, Badge, Drawer, Input, Layout, Menu, Row, Col, Affix, Modal, Button, Cascader, Select } from "antd";
+import { MenuOutlined, ShoppingCartOutlined, UserOutlined, SearchOutlined, EnvironmentFilled, CloseOutlined, PhoneOutlined, MinusOutlined, PlusOutlined, QuestionOutlined } from "@ant-design/icons";
 
 import Link from "next/link";
 
 import Cart from "./Cart";
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
 const { Option } = Select;
 
-const menu = (
-  <Menu
-    items={[
-      {
-        key: "1",
-        label: (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.antgroup.com"
-          >
-            1st menu item
-          </a>
-        ),
-      },
-      {
-        key: "2",
-        label: (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.aliyun.com"
-          >
-            2nd menu item
-          </a>
-        ),
-      },
-      {
-        key: "3",
-        label: (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.luohanacademy.com"
-          >
-            3rd menu item
-          </a>
-        ),
-      },
-    ]}
-  />
-);
+
 const options = [
   {
     value: "Dhaka",
@@ -81,7 +21,7 @@ const options = [
       {
         value: "Ashulia",
         label: "Ashulia",
-        
+
       },
     ],
   },
@@ -123,6 +63,7 @@ export default function Common({ children }) {
     setModalVisible(true);
   };
   const searchModalShow = () => {
+     console.log('llllol');
     setSearchModalVisible(true);
   };
 
@@ -138,20 +79,44 @@ export default function Common({ children }) {
     setModalVisible(false);
   };
 
+  // const [count, setCount] = useState(5);
+  const [show, setShow] = useState(true);
+
+  const increase = () => {
+    setCount(count + 1);
+  };
+
+  const decline = () => {
+    let newCount = count - 1;
+
+    if (newCount < 0) {
+      newCount = 0;
+    }
+
+    setCount(newCount);
+  };
+  const random = () => {
+    const newCount = Math.floor(Math.random() * 100);
+    setCount(newCount);
+  };
+
+
+  const ButtonGroup = Button.Group;
+  const iconStyle = { fontSize: 25, color: 'white' }
   return (
     <Layout>
       <Affix>
-        <Header className="main-header">
-          <div className="mobile-header">
-            <Row>
+        < >
+          <div >
+            <Row className="mobile-header">
               <Col span={8}>
                 <div className="logo">
-                 <Link href="/" passHref>
-                 <img src="/logo.png" alt="logo" className="logo-style" /></Link>
+                  <Link href="/" passHref>
+                    <img src="/logo.png" alt="logo" className="mobile-logo-style" /></Link>
                 </div>
               </Col>
               <Col span={4}></Col>
-              <Col span={12}>
+              <Col span={12} >
                 <Row>
                   <Col span={4}></Col>
                   <Col span={4}>
@@ -161,7 +126,7 @@ export default function Common({ children }) {
                   </Col>
                   <Col span={4}>
                     <div className="icon" onClick={showModal}>
-                      <EnvironmentOutlined />
+                      <EnvironmentFilled />
                     </div>
                   </Col>
                   <Col span={4}>
@@ -179,63 +144,36 @@ export default function Common({ children }) {
             </Row>
           </div>
           <div className="web-header">
-            <Row>
-              <Col span={4}>
-                <div className="logo">
-                 <Link href= "./" passHref>
-                 <img src="/logo.png" alt="logo" className="logo-style" /></Link>
+            <div className="icon-loc">
+              <div className="logo">
+                <Link href="./" passHref>
+                  <img src="/logo.png" alt="logo" className="logo-style" /></Link>
+              </div>
+              <div className="location-icon" onClick={showModal}>
+                <p>   <EnvironmentFilled style={{ fontSize: '25px', color: 'goldenrod' }} /> <span style={{ color: "goldenrod" }}>Banani</span> </p>
+              </div>
+            </div>
+            <div className="nav-list">
+              <div className="icon" onClick={searchModalShow}>
+                <p> <SearchOutlined style={iconStyle} /><span>Search</span> </p>
+              </div>
+              <div className="icon" style={{ iconStyle  }} onClick={() => Router.push("./helpCenter")}>
+                <p><PhoneOutlined style={iconStyle} /><span> HelpLine</span></p>
+              </div>
+              <div className="icon" onClick={() => Router.push("./webProfile")}>
+                <p><UserOutlined style={iconStyle} /><span>Sign In</span></p>
+              </div>
+              <div >
+                <div className="icon" onClick={cartShowDrawer}>
+                  <Badge >
+                    <p><ShoppingCartOutlined style={iconStyle} /> <span>Cart</span> </p>
+                  </Badge>
                 </div>
-              </Col>
-              <Col span={14}>
-                <Row>
-                  <Col span={24}>
-                    <div>
-                      <div className="search-box-container">
-                        {/* <Search className="header-search-box-section" /> */}
-                        <Input
-                          placeholder="Search here"
-                          prefix={
-                            <SearchOutlined className="header-search-icon" />
-                          }
-                          className="header-search"
-                        />
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-              <Col span={6}>
-                <Row>
-                  <Col span={4}>
-                    <div style={{ color: "white", float: "right" }}  onClick={() => Router.push("./helpCenter")}>
-                      <span> HelpLine</span>
-                    </div>
-                  </Col>
-                  <Col span={2}></Col>
-                  <Col span={4}>
-                    <div className="icon" onClick={showModal}>
-                      <EnvironmentOutlined />
-                    </div>
-                  </Col>
-                  <Col span={4}>
-                    <div className="icon">
-                      <UserOutlined
-                        onClick={() => Router.push("./webProfile")}
-                      />
-                    </div>
-                  </Col>
-                  <Col span={4}>
-                    <div className="icon">
-                      <ShoppingCartOutlined onClick={cartShowDrawer} />
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
-        </Header>
+        </>
       </Affix>
-
       <Drawer
         placement="right"
         maskClosable={false}
@@ -372,7 +310,7 @@ export default function Common({ children }) {
       <div> {children}</div>
 
       {/* <Login isLoginOpen={isLoginOpen}></Login> */}
-      
+
     </Layout>
   );
 }

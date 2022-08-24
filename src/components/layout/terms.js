@@ -10,8 +10,11 @@ export default function Terms(){
             />
         <p id='icon'> Terms & Condition</p>
         </div>
-           
+        <div className="term">
+               
           <p style={{margin: '2rem'}}>Text will be written here or redirect to link through browser</p>
+          
+        </div>
            
         </div>
     )

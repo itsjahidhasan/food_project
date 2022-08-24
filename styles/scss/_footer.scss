@@ -29,6 +29,15 @@
 .important-links {
   margin: 15px 0px;
 }
+.copyright{
+display: flex;
+flex-direction: row-reverse;
+margin-right: 6rem;
+
+}
+.copyright p{
+  font-size: 16px
+}
 .important-links ul {
   list-style: none;
   color: $color-primary;

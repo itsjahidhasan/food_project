@@ -99,6 +99,10 @@ export default function Footer() {
           </ul>
         </div>
       </Row>
+      <div className="copyright">
+        <p>© 2022 Owl Dhaka</p>
+      </div>
+
     </div>
   );
 }

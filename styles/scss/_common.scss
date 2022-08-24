@@ -1,16 +1,24 @@
 @import "./color";
+
 .ant-menu-item-selected {
   background-color: #141414 !important;
   border: none;
 }
+
 .cart .ant-drawer-title {
   flex: 1 1;
   margin: 0;
   color: $text-primary;
   font-weight: 500;
   font-size: 16px;
+  font-family: 'Roboto';
   line-height: 22px;
 }
+
+.ant-drawer-content-wrapper {
+  width: auto;
+}
+
 .ant-drawer-header {
   position: relative;
   display: flex;
@@ -24,93 +32,154 @@
 }
 
 .icon {
-  font-size: 20px;
-  text-align: center;
-  color: #f9f9fa;
+  // font-size: 20px;
+  margin: 0 2.5rem 0 2.5rem;
+  // text-align: center;
+  //color: #f9f9fa;
 }
-.icon:hover {
+
+.location-icon {
+  margin-left: 3rem;
+}
+
+.icon,.logo,.location-icon:hover {
   cursor: pointer;
 }
+
 .logo {
   text-align: center;
-  margin-top: 10px;
+  // margin-top: 10px;
   z-index: 1000000;
 }
 
 .logo-style {
-  width: 45px;
+  width: 75px;
+  height: 75px;
 }
 
-.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
-.ant-menu-inline.ant-menu-root
-  .ant-menu-submenu-title
-  > .ant-menu-title-content {
+.mobile-logo-style {
+  width: 55px;
+  height: 55px;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item>.ant-menu-title-content,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title>.ant-menu-title-content {
   flex: auto;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Roboto';
   color: white;
 }
+
 .search-box-container {
   text-align: center;
 }
+
 .header-search {
   width: 490px !important;
 }
+
 .header-search-icon {
   color: #141414;
 }
 
-.main-header {
-  padding: 0px !important;
-  height: 70px !important;
-}
+.main-header {}
+
 .mobile-header {
+  // background-color: #000000;
   background-color: #000000;
-}
-.web-header {
-  background: transparent;
-  backdrop-filter: blur(100px);
+  height: 80px;
   padding: 0;
-  //background-color: #141414;
+  display: flex;
+  align-items: center;
+  color: white;
 }
+
+.ant-row.mobile-header.ant-col.ant-col-12 {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 4rem;
+}
+
+.web-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  justify-content: space-between;
+  height: 100px;
+  background:#141414;
+  box-shadow: 0px 8px 30px #000000;
+  opacity: 2;
+}
+
+.web-header p {
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+
+}
+
+.icon-loc {
+  display: flex;
+  align-items: center;
+  margin-left: 5rem;
+
+}
+
 .ant-btn-loading {
   background-color: #faad14 !important;
   width: 110px;
   border-radius: 10px;
   border: 0px;
 }
+
 .location-confirm-btn {
   background-color: #faad14;
   width: 110px;
   border-radius: 10px;
   border: 0px;
 }
+
 .location {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .location .map-header {
   position: absolute;
   color: #707070;
   top: 5px;
   z-index: 55555;
 }
+
 .location .input-select-location {
   color: #707070;
   width: 130px;
   padding: 6px;
 }
+
 .map-view {
   width: 95%;
   height: 270px;
   padding-bottom: 15px;
 }
+
 .map {
-  width: 90%;
+  width: 60%;
 }
+
 .location .close-btn {
   position: absolute;
   right: 5px;
@@ -127,9 +196,11 @@
   cursor: pointer;
   z-index: 55555;
 }
+
 .ant-modal-wrap {
   backdrop-filter: blur(2px);
 }
+
 .search-model-show .ant-modal-content {
   height: 65vh;
   background-color: rgba(0, 0, 0, 0.1);
@@ -138,36 +209,46 @@
   border-radius: 0.3rem;
   outline: 0;
 }
+
 .search-model-show .ant-modal-header {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .search-model-show .ant-modal-header .ant-modal-title {
   color: #fff;
 }
+
 .search-model-show .ant-modal-close-x {
   color: red;
 }
+
 .model-searchBar {
   width: 100% !important;
 }
 
-@media (max-width: 1024px) {
-  .web-header {
+// @media (max-width: 992px) {
+//   .web-header {
+//     display: none;
+//   }
+// }
+@media only screen and (min-width: 768px) {
+  .mobile-header {
     display: none;
   }
 }
 
-@media (min-width: 1025px) {
-  .mobile-header {
-    display: none;
-  }
-  .map {
-    width: 250px;
+@media only screen and (max-width: 768px) {
+  .web-header {
+    display: none !important;
   }
 }
-@media (min-width: 320px) {
+
+@media (max-width: 1025px) {
+
+  // .mobile-header {
+  //   display: none;
+  // }
   .map {
-    width: 105%;
-    height: 250px;
+    width: 250px;
   }
 }

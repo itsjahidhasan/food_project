@@ -1,0 +1,28 @@
+.item-section{
+    height: 600px;
+    //overflow-y: scroll;
+
+}
+
+
+.f-items-box {
+    height: 120px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #0A0A0A;
+  padding: 1rem;
+    justify-content: space-between;
+    font-family: roboto;
+    margin-left: 1rem;
+    margin-bottom: 7px;
+}
+.f-items-box>h6{
+font-weight: bold;
+}
+
+.f-img {
+    height: 110px;
+    width: 150px;
+}

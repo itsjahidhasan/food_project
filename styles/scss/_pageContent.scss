@@ -71,19 +71,18 @@
 .more-btn {
   text-align: center;
   margin-top: 10vh;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 }
 .more-btn button {
   background-color: $text-primary;
   color: $backGround-color-secondary;
   font-size: 26px;
   font-weight: 700;
-  width: 25vw;
-  height: 11vh;
-  bottom: 50px;
-  border: 0px;
-  border-radius: 50px;
-  justify-items: center;
+  width: 265px;
+  height: 60px;
+  border-radius: 47px;
+  border: none;
+ 
 }
 .swiper {
   width: 100%;
@@ -132,6 +131,16 @@
 .swiper-button-prev {
   top: 34% !important;
 }
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+}
+#ban-img{
+  width: 60%;
+}
+
 
 footer {
   height: 18vh;
@@ -139,6 +148,11 @@ footer {
   line-height: 18vh;
   padding: 0px 35px;
   font-size: small;
+}
+@media (max-width:468px){
+  #ban-img{
+    width:100%;
+  }
 }
 
 @media (max-width: 426px) {

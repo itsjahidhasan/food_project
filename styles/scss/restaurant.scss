@@ -1,0 +1,38 @@
+.shop-container{
+    
+    position: absolute;
+    background-color: #141414;
+    color: $text-secondary;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.7fr 3fr 2fr;
+    padding: 3rem 1rem 1rem 1rem;
+}
+.restaurant-container{
+    box-shadow: 10px 10px 10px #00000087;
+opacity: 1;
+}
+.item-container>h4{
+margin-left: 1rem;
+}
+.cart-container{
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem 2rem ;
+    box-shadow: -10px 10px 10px 10px #00000087;
+opacity: 1;
+}
+.cart-container>h4{
+    text-align: center;
+    color: $text-primary;
+    font-family: Roboto;
+    font-weight: bold;
+}
+.cart-container>p{
+    color: #B2B2B2;
+}
+.item-container{
+  padding: 1.5rem;
+}

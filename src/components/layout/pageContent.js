@@ -17,27 +17,7 @@ import { Autoplay, Navigation, Scrollbar } from "swiper";
 export default function content() {
   return (
     <>
-    <div className="cards">
-    <div className="site-card-wrapper">
-    <Row gutter={16}>
-      <Col span={8}>
-        <Card title="Card title" bordered={false}>
-          Card content
-        </Card>
-      </Col>
-      <Col span={8}>
-        <Card title="Card title" bordered={false}>
-          Card content
-        </Card>
-      </Col>
-      <Col span={8}>
-        <Card title="Card title" bordered={false}>
-          Card content
-        </Card>
-      </Col>
-    </Row>
-  </div>
-    </div>
+   
       {/* Favorite content */}
       <Divider orientation="left"></Divider>
 
@@ -87,7 +67,7 @@ export default function content() {
         >
           <SwiperSlide>
             <div>
-              <Link href="./foodmenu">
+              <Link href="./restaurant">
                 <a>
                   <div className="contentItems">
                     <div>
@@ -196,6 +176,10 @@ export default function content() {
             </div>
           </SwiperSlide>
         </Swiper>
+      </div>
+      <div className="banner">
+        
+        <img id="ban-img" src="/Banner.png" alt="banner" />
       </div>
 
       {/* Available content */}

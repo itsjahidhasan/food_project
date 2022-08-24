@@ -1,7 +1,9 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
-
-import Router from 'next/router'
+import { Input } from 'antd';
 import WebProfile from "./webProfile";
+import Router from 'next/router'
+const { TextArea } = Input;
+
 export default function Report (){
    
     return(
@@ -13,8 +15,7 @@ export default function Report (){
         </div>
 <div className="reports">
 <button id="button">View Previous Reports</button>
-
-<input id='input'type="text" />
+<TextArea rows={4} id='input' />
 <button id="button" className="send-b">Send</button>
 </div>
 </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Router from 'next/router'
+import Router from "next/router";
 import Image from "next/image";
 import {
   Row,
@@ -18,6 +18,27 @@ export default function Cart() {
   const [visibleAddPromo, setVisibleAddPromo] = useState(false);
   const [visibleAdd, setVisibleAdd] = useState(false);
   const [visibleRemove, setVisibleRemove] = useState(false);
+  const [count, setCount] = useState(0);
+  const [show, setShow] = useState(true);
+
+  const increasebtn = () => {
+    setCount(count + 1);
+    console.log('tas');
+  };
+  const clicked = () => {
+
+    console.log('tas');
+  };
+
+  const declinebtn = () => {
+    let newCount = count - 1;
+
+    if (newCount < 0) {
+      newCount = 0;
+    }
+
+    setCount(newCount);
+  };
   const showClick = () => {
     setVisibleAddPromo(true);
     setVisibleAdd(true);
@@ -32,25 +53,21 @@ export default function Cart() {
   };
   return (
     <>
-      <div className="carts-content">
+      <div className="cart-content">
         <div className="checkout-btn-container">
           <button className="checkout-btn" onClick={() => Router.push("./delivery")}>Checkout</button>
         </div>
+        <div className="address-details">
+          <div>
+            <h6>Address</h6>
+            <p>11 Road no 16</p>
+            <h6>Note: Flat no 4B</h6>
+          </div>
+          <div className="edit-icon" onClick={clicked} >
+            <EditOutlined />
+          </div>
+        </div>
 
-        <Row gutter={16} className="row-padding">
-          <Col className="gutter-row" span={12}>
-            <div>
-              <h6>Address</h6>
-              <p>11 Road no 16</p>
-              <h6>Note: Flat no 4B</h6>
-            </div>
-          </Col>
-          <Col className="gutter-row" span={10}>
-            <div className="edit-icon">
-              <EditOutlined style={{ fontSize: 30 }} />
-            </div>
-          </Col>
-        </Row>
 
         <Row gutter={16} className="odered-items row-padding">
           <Col className="gutter-row" span={12}>
@@ -71,18 +88,18 @@ export default function Cart() {
               <Row>
                 <Col span={4}>
                   <div>
-                    <button className="decrease-button">-</button>
+                    <button className="decrease-button" onClick={declinebtn}>-</button>
                     {/* <MinusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
                 <Col span={4}>
                   <div>
-                    <input className="numberInput" type={Number} value={0} />
+                    <input className="numberInput" type={Number} value={count} />
                   </div>
                 </Col>
                 <Col span={4}>
                   <div>
-                    <button className="increase-button">+</button>
+                    <button className="increase-button" onClick={increasebtn}>+</button>
                     {/* <PlusSquareOutlined style={{ fontSize: 27 }} /> */}
                   </div>
                 </Col>
@@ -254,7 +271,7 @@ export default function Cart() {
             <div className="selected-food">
               <Row>
                 <Col span="12">
-                  <h6>Discount</h6>
+                  <h6>Total</h6>
                 </Col>
               </Row>
             </div>

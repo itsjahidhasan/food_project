@@ -7,6 +7,17 @@
   padding-top: 25px;
   padding-left: 15px;
 }
+.cart-content >p> {
+  font-family: 'Roboto';
+}
+.ant-drawer-content-wrapper{
+  //width: auto !important;
+}
+.address-details{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
 .decrease-button {
   width: 26px;
   height: 26px;
@@ -52,8 +63,7 @@
   background-color: $text-primary !important;
   font-size: 12px;
   font-weight: 700;
-  width: 90%;
-  height: 50%;
+  text-align: center;
   border: 0px;
   border-radius: 8px;
   justify-items: center;
@@ -94,10 +104,9 @@
   background-color: $backGround-color-primary;
   font-size: 12px;
   font-weight: 700;
-  width: 80%;
   border: 1px solid #ffaa00;
   border-radius: 5px;
-  justify-items: center;
+  
 }
 .remove-promo:hover {
   background-color: $backGround-color-primary;
@@ -129,8 +138,7 @@
   font-size: medium;
   font-weight: 600;
   color: white;
-  padding-left: 6px;
-  padding-right: 6px;
+  
   margin-left: 1px;
   border-radius: 4px;
   border: none;
@@ -142,22 +150,22 @@
 }
 .amount {
   text-align: right;
-  padding-right: 6px;
+  //padding-right: 6px;
 }
 .total-amount {
   background-color: $backGround-color-primary;
   height: 100px;
 }
 
-@media (min-width: 601px) and (min-width: 1024px) {
-  .cart-content {
-    padding: 1rem;
-      margin: 1rem 35%;
-      border-radius: 5px;
-      border: 1px solid $color-primary;
-      ;
-      font-size: 30px;
+// @media  (min-width: 1024px) {
+//   .cart-content {
+//     padding: 1rem;
+//       margin: 2rem 32%;
+//       border-radius: 5px;
+//       border: 1px solid $color-primary;
+//       ;
+//       font-size: 30px;
 
-  }
+//   }
 
-}
+// }
